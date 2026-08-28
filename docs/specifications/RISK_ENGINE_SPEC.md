@@ -9,8 +9,9 @@ Defines deterministic limits and kill switches as independent gate.
 ## Normative requirements
 
 - Limits: MAX_POSITION_PER_ASSET/PROTOCOL/CHAIN/EXCHANGE, MAX_DAILY_LOSS, MAX_DRAWDOWN, MAX_SLIPPAGE, MAX_PRICE_IMPACT, MIN_POOL_LIQUIDITY, MIN_EXPECTED_PROFIT, MAX_GAS_PERCENTAGE, MAX_OPEN_POSITIONS, MAX_EXPOSURE_PER_USER, MAX_BRIDGE_EXPOSURE, MAX_STABLECOIN_EXPOSURE and MAX_SMART_CONTRACT_EXPOSURE.
-- Global, per-user, strategy, protocol, chain and exchange kill switches dominate approvals.
+- Global, per-user, strategy, protocol, chain and exchange kill switches dominate approvals. Each scope must feed the common scope-matching deny check before signing/submission, with propagation/max-staleness, in-flight handling and authorized reset/revocation evidence.
 - Risk output is versioned, deterministic and bound to input snapshot/time/tenant/environment.
+- Risk evaluates aggregate correlation, concentrated-LP impermanent-loss stress, beneficiary/device velocity and cross-position exposure in addition to marginal limits. Current ComplianceDecision and FraudRiskDecision ALLOW are independent spend prerequisites; Risk cannot substitute for them.
 
 ## Component contracts
 

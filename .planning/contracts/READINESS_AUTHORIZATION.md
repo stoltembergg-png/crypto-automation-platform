@@ -1,8 +1,13 @@
 # Readiness Authorization
 
-**Status:** Proposed contract; future implementation must use generated schema plus compatibility tests.
+**Status:** `PROPOSED · PLANNING_ONLY`. This contract never enables mainnet; it supplements `docs/security/ADVERSARIAL_CLOSURE_SPEC.md` §1.2 and §2.
 
-Mainnet authorization is signed/versioned and binds tenant, operation, environment attestation, legal state, risk/policy/simulation/guard hashes, expiry, revocation and replay nonce.
+## MainnetAuthorization.v1
 
-## Required tests
-Unknown version/action, malformed payload, duplicate/conflict, tenant substitution, replay, expiry/revocation, correlation preservation and redaction are negative cases.
+A signed authorization is valid only for one exact operation and contains: schema/authorization ID; canonical action vocabulary; tenant/environment; operation/resource fingerprint; amount, asset, network, destination or transaction-envelope digest; environment attestation digest; Gate Registry version/digest; explicit required Q-ID list; evidence digests; policy/risk/simulation/guard/compliance/fraud decision digests; capital reservation IDs; expiry; replay nonce; issuer identities/key IDs; distinct-principal quorum; and revocation state.
+
+A generic `Q-001..Q-010 as applicable`, source URL, prior approval, paper/testnet result, deployment or UI state is invalid. The verifier uses only the trust registry; unknown/mismatched/expired/revoked issuer, evidence, scope, action, amount, destination, environment, limit reservation or quorum denies before signing or submission.
+
+## Required future tests
+
+Test signature/issuer/key substitution, operation and destination mutation, exact gate-set mismatch, catalog-digest drift, stale evidence, duplicate principal quorum, environment mismatch, replay, capital-reservation race, expiry, revocation and scoped kill switch denial.

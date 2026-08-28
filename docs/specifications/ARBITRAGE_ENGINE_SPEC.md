@@ -10,6 +10,8 @@ Defines opportunity detection and simulation; it does not permit funded arbitrag
 
 - Pipeline: normalized market data→opportunity detection→fees→slippage/impact→latency/finality→liquidity→risk→simulation→decision.
 - Expected net profit includes spread minus maker/taker, gas, bridge/withdrawal, slippage, impact, latency and expected failed-transaction cost.
+- `NetPnL = realised_fill_proceeds - realised_fill_costs - actual_fees - gas - withdrawal/bridge costs - recovery_costs + conservative_residual_liquidation_value`. Partial fill, unavailable hedge, cancellation, reorg or residual requires RECOVERY_REQUIRED and cannot pass a theoretical full-cycle profit threshold.
+- QuoteReservation serializes venue/market path, snapshot digest, observed-at/expiry, cost-model version, amount, exposure/capital reservation IDs and simulation digest. Any change/expiry denies before execution.
 - Triangular detection is directed graph/cycle analysis with per-edge executable quantity/cost constraints.
 
 ## Component contracts

@@ -1,11 +1,10 @@
-flowchart TB
-  L[Internal Ledger]-->C[Compare]
-  MP[Payment Evidence]-->C
-  EX[Exchange Evidence]-->C
-  CH[Chain/Protocol Evidence]-->C
-  C-->MATCH[Matched]
-  C-->MIS[Mismatch Case]
-  MIS-->BLOCK[Block affected capability]
-  MIS-->INV[Investigate]
-  INV-->CP[Correction Proposal]
-  CP-->L
+flowchart LR
+  EV[External evidence]-->RUN[ReconciliationRun: comparable cut]
+  RUN-->CP[CorrectionProposal]
+  CP-->POL[Policy + Accounting Authority]
+  POL-->CMD[Authorized AccountingCommand]
+  CMD-->LED[Ledger]
+  RUN-->AUD[Audit case]
+  CP-->AUD
+  CMD-->AUD
+  EV-. no direct ledger write .->LED

@@ -8,9 +8,11 @@ Defines the singular double-entry availability ledger as financial authority.
 
 ## Normative requirements
 
-- Every AccountingEvent has immutable ID/version, tenant, asset, type, effective/recorded time, idempotency scope/key, correlation/causation, policy/evidence references and balanced postings.
+- Every AccountingEvent has immutable ID/version, tenant, environment, asset, type, effective/recorded time, idempotency scope/key, correlation/causation, policy/evidence references and balanced postings.
+- Accounts, events, journal entries and postings have tenant/environment-scoped composite foreign keys. A journal entry and all its posting accounts must share the event tenant/environment; balanced cross-tenant or cross-environment posting is denied for every caller, including service roles/migrations.
 - Accounts distinguish pending, available, reserved, exchange custody, chain custody, protocol position, receivable, liability, revenue/fee and equity as applicable.
 - Multi-asset conversion uses linked balanced legs; PnL/valuation are explicit records, never balance mutation by UI.
+- Ledger accepts economic mutation only through valid, non-expired `AccountingCommand.v1` issued by Accounting Authority; provider, adapter, AI and reconciliation objects are evidence/proposal-only.
 
 ## Component contracts
 

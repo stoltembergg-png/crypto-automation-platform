@@ -11,6 +11,8 @@ Defines capability-negotiated CEX adapters; no exchange is selected or enabled i
 - Methods: getMarkets, getBalances, getOrderBook, getTicker, getFees, placeOrder, cancelOrder, getOrder, getOpenOrders, getTransfers, withdraw, depositAddress.
 - Capabilities include SPOT, LIMIT_ORDER, MARKET_ORDER, WITHDRAW, DEPOSIT, WEBSOCKET, MARGIN, FUTURES. Margin/futures/leverage are deny-by-default.
 - Every adapter invocation requires an active ProviderClaim and attenuated capability.
+- `withdraw` requires persisted WithdrawalIntent correlation, idempotent `LOCK_POSTED`, durable outbox, current operation authorization and capability grant; it rejects direct/generic withdrawal calls even from an otherwise authenticated adapter client.
+- `UNKNOWN` is evidence-gap state only: no automatic retry, unlock or rebroadcast occurs until provider-negotiated semantics and reconciliation evidence yield an authorized resolution.
 
 ## Component contracts
 

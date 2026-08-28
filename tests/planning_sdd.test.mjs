@@ -31,8 +31,8 @@ test('@spec:AC-003 architecture diagrams and contracts are complete', () => {
 test('@spec:AC-004 implementation cards contain every required field', () => {
   const cards = JSON.parse(read('.planning/queue/queue.json'));
   const md = read('.planning/queue/PR_CARDS.md');
-  assert.equal(cards.length, 133);
-  for (const label of ['Objective:', 'Scope:', 'Files:', 'Dependencies:', 'Implementation:', 'Tests:', 'Acceptance criteria:', 'Security implications:', 'Observability:', 'Rollback:', 'Definition of done:']) assert.equal((md.match(new RegExp(label, 'g')) || []).length, 133, label);
+  assert.equal(cards.length, 141);
+  for (const label of ['Objective:', 'Scope:', 'Files:', 'Dependencies:', 'Implementation:', 'Tests:', 'Acceptance criteria:', 'Security implications:', 'Observability:', 'Rollback:', 'Definition of done:']) assert.equal((md.match(new RegExp(label, 'g')) || []).length, 141, label);
 });
 
 test('@spec:AC-005 @principle:P-005 queue DAG is acyclic', () => {
@@ -56,7 +56,7 @@ test('@spec:AC-008 @principle:P-003 no financial runtime roots exist in planning
 });
 
 test('@spec:AC-009 integrity report limits its own claim', () => {
-  assert.match(report.note, /document topology only/i);
+  assert.match(report.note, /documented topology/i);
   assert.equal(report.status, 'PASS');
   assert.notEqual(report.mainnet, 'PASS');
 });
@@ -71,7 +71,7 @@ test('@spec:AC-010 @principle:P-004 planning artifacts contain no token-shaped s
 test('@spec:AC-011 develop page is status-only and does not imply a financial runtime', () => {
   const page = read('develop/index.html');
   const config = read('vercel.json');
-  for (const marker of ['PLANNING BASELINE', '133', '68', 'MAINNET BLOCKED']) assert.ok(page.includes(marker), marker);
+  for (const marker of ['PLANNING BASELINE', '141', '68', 'MAINNET BLOCKED']) assert.ok(page.includes(marker), marker);
   assert.equal(/<form|<script\b|https?:\/\//i.test(page), false);
   assert.ok(config.includes('"/develop"'));
 });

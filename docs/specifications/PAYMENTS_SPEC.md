@@ -22,7 +22,7 @@ No cross-system atomicity; duplicate/conflicting/malformed evidence is quarantin
 
 ## State and failure semantics
 
-RECEIVED→AUTHORIZED→CAPTURED→SETTLED with FEE_ASSESSED, REVERSAL, REFUND, CORRECTION, MALFORMED, CONFLICT and RECONCILIATION_PENDING branches.
+RECEIVED→AUTHORIZED→CAPTURED→SETTLED with FEE_ASSESSED, REVERSAL, REFUND, CHARGEBACK_OR_DISPUTE, CORRECTION, MALFORMED, CONFLICT and RECONCILIATION_PENDING branches. A dispute/reversal produces protected/reserved/review state only through authorized AccountingCommand and reconciliation case; it never silently reuses a deposit posting.
 
 ## Future verification
 

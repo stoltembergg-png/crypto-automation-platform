@@ -1731,7 +1731,7 @@
 - **Objective:** Establish the smallest reviewable implementation slice for kyc/kyt/sanctions boundary without enabling financial capability.
 - **Scope:** One bounded domain/contract/test surface; out of scope are unrelated provider activation, mainnet, credentials and policy broadening.
 - **Files:** `docs/specifications/`, `.planning/contracts/`, future `crates/kyc-kyt-sanctions-boundary/`, future `apps/web/`, future `tests/kyc-kyt-sanctions-boundary/` only as justified by the selected slice.
-- **Dependencies:** PR-123; Q-001..Q-010 as applicable; unresolved gates yield BLOCKED.
+- **Dependencies:** PR-123; evaluator must use the explicit Gate Registry set supplied by the target capability; generic Q ranges deny.
 - **Implementation:** Implement the contract and one consuming boundary; preserve module ownership, idempotency, tenant/environment binding and audit correlation. No direct provider/ledger/policy bypass.
 - **Tests:** `@spec:PR-124` focused unit/contract/negative test; add property/state-machine/adversarial fixture when this card changes money, authority, signer, adapter or state transition.
 - **Acceptance criteria:** Named contract is versioned; deny path is deterministic; all state changes are correlated; scope-specific tests are non-vacuous and PASS on exact head SHA.
@@ -1745,7 +1745,7 @@
 - **Objective:** Establish the smallest reviewable implementation slice for pii classification/retention without enabling financial capability.
 - **Scope:** One bounded domain/contract/test surface; out of scope are unrelated provider activation, mainnet, credentials and policy broadening.
 - **Files:** `docs/specifications/`, `.planning/contracts/`, future `crates/pii-classification-retention/`, future `apps/web/`, future `tests/pii-classification-retention/` only as justified by the selected slice.
-- **Dependencies:** PR-123; Q-001..Q-010 as applicable; unresolved gates yield BLOCKED.
+- **Dependencies:** PR-123; evaluator must use the explicit Gate Registry set supplied by the target capability; generic Q ranges deny.
 - **Implementation:** Implement the contract and one consuming boundary; preserve module ownership, idempotency, tenant/environment binding and audit correlation. No direct provider/ledger/policy bypass.
 - **Tests:** `@spec:PR-125` focused unit/contract/negative test; add property/state-machine/adversarial fixture when this card changes money, authority, signer, adapter or state transition.
 - **Acceptance criteria:** Named contract is versioned; deny path is deterministic; all state changes are correlated; scope-specific tests are non-vacuous and PASS on exact head SHA.
@@ -1759,7 +1759,7 @@
 - **Objective:** Establish the smallest reviewable implementation slice for compliance case/audit without enabling financial capability.
 - **Scope:** One bounded domain/contract/test surface; out of scope are unrelated provider activation, mainnet, credentials and policy broadening.
 - **Files:** `docs/specifications/`, `.planning/contracts/`, future `crates/compliance-case-audit/`, future `apps/web/`, future `tests/compliance-case-audit/` only as justified by the selected slice.
-- **Dependencies:** PR-123; Q-001..Q-010 as applicable; unresolved gates yield BLOCKED.
+- **Dependencies:** PR-123; evaluator must use the explicit Gate Registry set supplied by the target capability; generic Q ranges deny.
 - **Implementation:** Implement the contract and one consuming boundary; preserve module ownership, idempotency, tenant/environment binding and audit correlation. No direct provider/ledger/policy bypass.
 - **Tests:** `@spec:PR-126` focused unit/contract/negative test; add property/state-machine/adversarial fixture when this card changes money, authority, signer, adapter or state transition.
 - **Acceptance criteria:** Named contract is versioned; deny path is deterministic; all state changes are correlated; scope-specific tests are non-vacuous and PASS on exact head SHA.
@@ -1773,7 +1773,7 @@
 - **Objective:** Establish the smallest reviewable implementation slice for tax/accounting policy gate without enabling financial capability.
 - **Scope:** One bounded domain/contract/test surface; out of scope are unrelated provider activation, mainnet, credentials and policy broadening.
 - **Files:** `docs/specifications/`, `.planning/contracts/`, future `crates/tax-accounting-policy-gate/`, future `apps/web/`, future `tests/tax-accounting-policy-gate/` only as justified by the selected slice.
-- **Dependencies:** PR-123; Q-001..Q-010 as applicable; unresolved gates yield BLOCKED.
+- **Dependencies:** PR-123; evaluator must use the explicit Gate Registry set supplied by the target capability; generic Q ranges deny.
 - **Implementation:** Implement the contract and one consuming boundary; preserve module ownership, idempotency, tenant/environment binding and audit correlation. No direct provider/ledger/policy bypass.
 - **Tests:** `@spec:PR-127` focused unit/contract/negative test; add property/state-machine/adversarial fixture when this card changes money, authority, signer, adapter or state transition.
 - **Acceptance criteria:** Named contract is versioned; deny path is deterministic; all state changes are correlated; scope-specific tests are non-vacuous and PASS on exact head SHA.
@@ -1787,7 +1787,7 @@
 - **Objective:** Establish the smallest reviewable implementation slice for readiness evidence evaluator without enabling financial capability.
 - **Scope:** One bounded domain/contract/test surface; out of scope are unrelated provider activation, mainnet, credentials and policy broadening.
 - **Files:** `docs/specifications/`, `.planning/contracts/`, future `crates/readiness-evidence-evaluator/`, future `apps/web/`, future `tests/readiness-evidence-evaluator/` only as justified by the selected slice.
-- **Dependencies:** PR-123; Q-001..Q-010 as applicable; unresolved gates yield BLOCKED.
+- **Dependencies:** PR-123; evaluator must use the explicit Gate Registry set supplied by the target capability; generic Q ranges deny.
 - **Implementation:** Implement the contract and one consuming boundary; preserve module ownership, idempotency, tenant/environment binding and audit correlation. No direct provider/ledger/policy bypass.
 - **Tests:** `@spec:PR-128` focused unit/contract/negative test; add property/state-machine/adversarial fixture when this card changes money, authority, signer, adapter or state transition.
 - **Acceptance criteria:** Named contract is versioned; deny path is deterministic; all state changes are correlated; scope-specific tests are non-vacuous and PASS on exact head SHA.
@@ -1801,7 +1801,7 @@
 - **Objective:** Establish the smallest reviewable implementation slice for signed activation authorization without enabling financial capability.
 - **Scope:** One bounded domain/contract/test surface; out of scope are unrelated provider activation, mainnet, credentials and policy broadening.
 - **Files:** `docs/specifications/`, `.planning/contracts/`, future `crates/signed-activation-authorization/`, future `apps/web/`, future `tests/signed-activation-authorization/` only as justified by the selected slice.
-- **Dependencies:** PR-128; Q-001..Q-010 as applicable; unresolved gates yield BLOCKED.
+- **Dependencies:** PR-128; exact Q-ID set is operation-bound and registry-digested; generic Q ranges deny.
 - **Implementation:** Implement the contract and one consuming boundary; preserve module ownership, idempotency, tenant/environment binding and audit correlation. No direct provider/ledger/policy bypass.
 - **Tests:** `@spec:PR-129` focused unit/contract/negative test; add property/state-machine/adversarial fixture when this card changes money, authority, signer, adapter or state transition.
 - **Acceptance criteria:** Named contract is versioned; deny path is deterministic; all state changes are correlated; scope-specific tests are non-vacuous and PASS on exact head SHA.
@@ -1815,7 +1815,7 @@
 - **Objective:** Establish the smallest reviewable implementation slice for environment attestation verifier without enabling financial capability.
 - **Scope:** One bounded domain/contract/test surface; out of scope are unrelated provider activation, mainnet, credentials and policy broadening.
 - **Files:** `docs/specifications/`, `.planning/contracts/`, future `crates/environment-attestation-verifier/`, future `apps/web/`, future `tests/environment-attestation-verifier/` only as justified by the selected slice.
-- **Dependencies:** PR-128; Q-001..Q-010 as applicable; unresolved gates yield BLOCKED.
+- **Dependencies:** PR-128; exact Q-ID set is operation-bound and registry-digested; generic Q ranges deny.
 - **Implementation:** Implement the contract and one consuming boundary; preserve module ownership, idempotency, tenant/environment binding and audit correlation. No direct provider/ledger/policy bypass.
 - **Tests:** `@spec:PR-130` focused unit/contract/negative test; add property/state-machine/adversarial fixture when this card changes money, authority, signer, adapter or state transition.
 - **Acceptance criteria:** Named contract is versioned; deny path is deterministic; all state changes are correlated; scope-specific tests are non-vacuous and PASS on exact head SHA.
@@ -1829,7 +1829,7 @@
 - **Objective:** Establish the smallest reviewable implementation slice for capital limit enforcement without enabling financial capability.
 - **Scope:** One bounded domain/contract/test surface; out of scope are unrelated provider activation, mainnet, credentials and policy broadening.
 - **Files:** `docs/specifications/`, `.planning/contracts/`, future `crates/capital-limit-enforcement/`, future `apps/web/`, future `tests/capital-limit-enforcement/` only as justified by the selected slice.
-- **Dependencies:** PR-128; Q-001..Q-010 as applicable; unresolved gates yield BLOCKED.
+- **Dependencies:** PR-128; exact Q-ID set is operation-bound and registry-digested; generic Q ranges deny.
 - **Implementation:** Implement the contract and one consuming boundary; preserve module ownership, idempotency, tenant/environment binding and audit correlation. No direct provider/ledger/policy bypass.
 - **Tests:** `@spec:PR-131` focused unit/contract/negative test; add property/state-machine/adversarial fixture when this card changes money, authority, signer, adapter or state transition.
 - **Acceptance criteria:** Named contract is versioned; deny path is deterministic; all state changes are correlated; scope-specific tests are non-vacuous and PASS on exact head SHA.
@@ -1843,7 +1843,7 @@
 - **Objective:** Establish the smallest reviewable implementation slice for mainnet denial regression suite without enabling financial capability.
 - **Scope:** One bounded domain/contract/test surface; out of scope are unrelated provider activation, mainnet, credentials and policy broadening.
 - **Files:** `docs/specifications/`, `.planning/contracts/`, future `crates/mainnet-denial-regression-suite/`, future `apps/web/`, future `tests/mainnet-denial-regression-suite/` only as justified by the selected slice.
-- **Dependencies:** PR-128; Q-001..Q-010 as applicable; unresolved gates yield BLOCKED.
+- **Dependencies:** PR-128; exact Q-ID set is operation-bound and registry-digested; generic Q ranges deny.
 - **Implementation:** Implement the contract and one consuming boundary; preserve module ownership, idempotency, tenant/environment binding and audit correlation. No direct provider/ledger/policy bypass.
 - **Tests:** `@spec:PR-132` focused unit/contract/negative test; add property/state-machine/adversarial fixture when this card changes money, authority, signer, adapter or state transition.
 - **Acceptance criteria:** Named contract is versioned; deny path is deterministic; all state changes are correlated; scope-specific tests are non-vacuous and PASS on exact head SHA.
@@ -1857,7 +1857,7 @@
 - **Objective:** Establish the smallest reviewable implementation slice for manual activation governance without enabling financial capability.
 - **Scope:** One bounded domain/contract/test surface; out of scope are unrelated provider activation, mainnet, credentials and policy broadening.
 - **Files:** `docs/specifications/`, `.planning/contracts/`, future `crates/manual-activation-governance/`, future `apps/web/`, future `tests/manual-activation-governance/` only as justified by the selected slice.
-- **Dependencies:** PR-128, PR-132; Q-001..Q-010 as applicable; unresolved gates yield BLOCKED.
+- **Dependencies:** PR-128, PR-132; Q-001, Q-002, Q-003, Q-004, Q-005, Q-006, Q-007, Q-008, Q-009, Q-010; each must be exact, current and scope-matching.
 - **Implementation:** Implement the contract and one consuming boundary; preserve module ownership, idempotency, tenant/environment binding and audit correlation. No direct provider/ledger/policy bypass.
 - **Tests:** `@spec:PR-133` focused unit/contract/negative test; add property/state-machine/adversarial fixture when this card changes money, authority, signer, adapter or state transition.
 - **Acceptance criteria:** Named contract is versioned; deny path is deterministic; all state changes are correlated; scope-specific tests are non-vacuous and PASS on exact head SHA.
@@ -1865,3 +1865,115 @@
 - **Observability:** Emit bounded structured event/metric/trace with correlation ID and health signal; never raw secret/PII.
 - **Rollback:** Disable owning feature/capability; preserve append-only audit and ledger history; use compatible forward fix/compensating record, never destructive rewrite.
 - **Definition of done:** Implementation+tests+contract/ADR links+docs+required CI checks PASS; no Q gate unresolved for any claimed capability; verification evidence bound to current SHA.
+
+## PR-134 — Canonical gate registry and specification precedence
+- **Milestone:** M0 Post-Review Planning Closure
+- **Objective:** Make gate semantics and document precedence machine-checkable so evidence cannot close the wrong decision.
+- **Scope:** Canonical GateId registry, authority precedence, semantic-parity validator and migration of all Q references; excludes provider/legal evaluation.
+- **Files:** `.planning/master/GATE_REGISTRY.md`, `docs/architecture/SPEC_PRECEDENCE.md`, tests and all affected planning references.
+- **Dependencies:** PR-001; Registry semantics only; it grants no Q-gate PASS or financial capability.
+- **Implementation:** Implement a versioned server-independent registry model and documentation validator; reject duplicate Q-ID meanings, generic mainnet gate sets and stale registry digests.
+- **Tests:** ACT-004; negative semantic mismatch, stale digest and generic-gate-set tests.
+- **Acceptance criteria:** Every Q reference resolves to exactly one semantic decision/owner; no consumer treats URL retrieval as gate PASS.
+- **Security implications:** Prevents approval-confusion paths across legal, provider, custody, accounting and release authority.
+- **Observability:** Emit registry version/digest, gate evaluation scope, evidence digest, expiry and denial reason without raw evidence payload.
+- **Rollback:** Disable gate evaluator; retain registry/audit history; forward-fix mappings without deleting prior evidence.
+- **Definition of done:** Implementation+tests+contract/ADR links+docs+required CI checks PASS; no named Q gate unresolved for any claimed capability; verification evidence is bound to the exact SHA.
+
+## PR-135 — Tenant and environment ledger boundary
+- **Milestone:** M3 Ledger Amendment
+- **Objective:** Make cross-tenant/environment financial mutation impossible even to service-role and migration paths.
+- **Scope:** Composite scoped keys, AccountingCommand-only writer boundary and server-owned contract classification; excludes real ledger operation.
+- **Files:** `docs/specifications/LEDGER_SPEC.md`, `docs/architecture/DATA_MODEL.md`, future ledger migration/schema and focused tests.
+- **Dependencies:** PR-008, PR-134; Q-004, Q-006, Q-009; unresolved or mismatched gate denies claimed implementation readiness.
+- **Implementation:** Require tenant/environment on every financial/authority row; enforce composite FKs and deny forged GLOBAL classification or direct adapter/reconciliation/AI ledger calls.
+- **Tests:** ACT-001, ACT-002; service-role cross-tenant, balanced cross-tenant and forged-GLOBAL negative tests.
+- **Acceptance criteria:** No balanced entry can span tenant/environment; Ledger accepts only current AccountingCommand.v1 with matching scope.
+- **Security implications:** Contains privileged-worker, migration and object-substitution blast radius.
+- **Observability:** Record bounded tenant/environment mismatch reason, command digest and correlation ID.
+- **Rollback:** Feature-disable new writer path; use forward-compatible schema migration/compensating records; never drop journal history.
+- **Definition of done:** Implementation+tests+contract/ADR links+docs+required CI checks PASS; no named Q gate unresolved for any claimed capability; verification evidence is bound to the exact SHA.
+
+## PR-136 — Withdrawal intent, one-lock and ambiguous broadcast protocol
+- **Milestone:** M5 Withdrawal Amendment
+- **Objective:** Serialize withdrawal authorization, economic locking, outbox submission and ambiguous recovery without duplicate spend.
+- **Scope:** Withdrawal state machine, lock protocol, adapter request boundary and provider-UNKNOWN handling; excludes enabled payout/wallet provider.
+- **Files:** `docs/specifications/WITHDRAWALS_SPEC.md`, `EXCHANGE_ADAPTER_SPEC.md`, contracts, future state-machine code and tests.
+- **Dependencies:** PR-027, PR-135; Q-002, Q-003, Q-004, Q-007; all named decisions remain deny-by-default.
+- **Implementation:** Require PREAUTHORIZED before one atomic LOCK_POSTED; require durable intent/outbox/capability for submit; prohibit retry/rebroadcast on BROADCAST_AMBIGUOUS.
+- **Tests:** ACT-006, ACT-007, ACT-008 plus denial/expiry/revocation-before-lock and linked-recovery tests.
+- **Acceptance criteria:** Pre-lock failure has no posting; same intent cannot double-lock or rebroadcast; new recovery intent has fresh authority/evidence.
+- **Security implications:** Prevents timeout double debit, destination mutation, ambient adapter withdrawal and cash-out bypass.
+- **Observability:** Emit intent/lock/outbox/evidence correlation and opaque ambiguity state; redact destination/PII.
+- **Rollback:** Disable withdrawal capability; preserve lock and audit history; resolve through reconciled compensating workflow only.
+- **Definition of done:** Implementation+tests+contract/ADR links+docs+required CI checks PASS; no named Q gate unresolved for any claimed capability; verification evidence is bound to the exact SHA.
+
+## PR-137 — Comparable-cut reconciliation and accounting authority
+- **Milestone:** M9 Reconciliation Amendment
+- **Objective:** Ensure reconciliation evaluates comparable evidence and can only propose—not post—financial corrections.
+- **Scope:** ReconciliationRun/EvidenceSet/CorrrectionProposal contracts, authority diagram and future negative tests; excludes provider data retrieval.
+- **Files:** `docs/specifications/RECONCILIATION_SPEC.md`, diagrams, future reconciliation module and tests.
+- **Dependencies:** PR-054, PR-135; Q-004, Q-008; any missing source completeness or correction authority keeps the scope blocked.
+- **Implementation:** Require cutoffs, scope, cursors, completeness, finality and tolerance; gate MATCHED; route CorrectionProposal through Accounting Authority to AccountingCommand.
+- **Tests:** ACT-009 and negative direct-ledger-write, stale/paginated evidence and correction-authorization tests.
+- **Acceptance criteria:** Incomplete evidence never matches; reconciliation identity has no Ledger-write capability.
+- **Security implications:** Prevents external evidence or worker compromise from changing balances.
+- **Observability:** Record evidence digest/cutoff/completeness, mismatch age/owner and capability-block scope.
+- **Rollback:** Suspend correction capability; preserve cases/evidence; issue only authorized compensating records.
+- **Definition of done:** Implementation+tests+contract/ADR links+docs+required CI checks PASS; no named Q gate unresolved for any claimed capability; verification evidence is bound to the exact SHA.
+
+## PR-138 — Residual PnL, quote reservation and non-vacuous backtesting
+- **Milestone:** M11 Arbitrage Amendment
+- **Objective:** Prevent full-cycle theoretical spreads from hiding residual, partial-fill, freshness or correlation loss.
+- **Scope:** NetPnL, QuoteReservation, recovery semantics, correlation/IL stress and backtest evidence contract; excludes live strategy execution.
+- **Files:** `ARBITRAGE_ENGINE_SPEC.md`, `BACKTESTING_SPEC.md`, future simulator/backtest tests and reports.
+- **Dependencies:** PR-068; Q-005 and Q-007; no strategy claim or funded path before approved asset/risk evidence.
+- **Implementation:** Compute realised and conservative residual economics; serialize quote/capital reservations; fail closed on stale/future/zero-scenario data or unavailable hedge.
+- **Tests:** ACT-010 plus partial-fill unavailable-hedge, stale/future-data mutation, changed-cost and zero/skip-scenario tests.
+- **Acceptance criteria:** Recovery-required outcome cannot meet profit threshold; runner proves point-in-time inputs, calibration and non-vacuous scenarios.
+- **Security implications:** Limits model laundering and capital exposure under stale or adversarial market data.
+- **Observability:** Record snapshots, model/calibration/cost hashes, reservations, residual valuation and recovery outcome.
+- **Rollback:** Disable strategy/capital capability; expire reservations; retain simulation evidence and no destructive PnL rewrite.
+- **Definition of done:** Implementation+tests+contract/ADR links+docs+required CI checks PASS; no named Q gate unresolved for any claimed capability; verification evidence is bound to the exact SHA.
+
+## PR-139 — Recursive transaction envelope, finality and MEV submission policy
+- **Milestone:** M13 DEX Amendment
+- **Objective:** Bind every nested DEX action and chain observation to a safe plan, finality and submission-channel policy.
+- **Scope:** Recursive envelope grammar, proxy/code pinning, nonce lifecycle, reorg/LP finality and MEV fallback policy; excludes chain enablement.
+- **Files:** `DEX_ADAPTER_SPEC.md`, `CHAIN_ADAPTER_SPEC.md`, `TRANSACTION_GUARD_SPEC.md`, `LIQUIDITY_ENGINE_SPEC.md` and future contract tests.
+- **Dependencies:** PR-074; Q-003, Q-005, Q-007; absence of allowed chain/protocol/signing evidence denies all submission.
+- **Implementation:** Deny unknown nested calls; bind permits/sweeps/approvals; pin implementation/hash/block; require fresh simulation for changes; serialize nonce/reorg/channel fallback.
+- **Tests:** ACT-011, ACT-012 plus hidden recipient/permit, proxy change, equivocation, nonce race, LP reorg and public-channel fallback tests.
+- **Acceptance criteria:** No nested field or fallback changes after authorization; ACTIVE LP requires finality; no channel claims privacy/inclusion guarantee.
+- **Security implications:** Stops calldata smuggling, approval drain, proxy drift, reorg and mempool-risk fallback.
+- **Observability:** Record envelope/proxy/block/simulation/submission-policy digests and opaque denial reason.
+- **Rollback:** Revoke protocol/chain/channel capability; do not resubmit ambiguous operations; reconcile evidence before any linked recovery.
+- **Definition of done:** Implementation+tests+contract/ADR links+docs+required CI checks PASS; no named Q gate unresolved for any claimed capability; verification evidence is bound to the exact SHA.
+
+## PR-140 — Execution-bound compliance, fraud and privacy decisions
+- **Milestone:** M19 Compliance Amendment
+- **Objective:** Make compliance, fraud and privacy decisions explicit spend gates rather than labels in a review document.
+- **Scope:** ComplianceDecision/FraudRiskDecision, data lifecycle, step-up invalidation and cash-out holds; excludes provider/legal approval.
+- **Files:** `docs/compliance/COMPLIANCE_REVIEW.md`, `POLICY_DECISION.md`, `RISK_ENGINE_SPEC.md`, future decision services/tests.
+- **Dependencies:** PR-117; Q-001, Q-006, Q-007; require separately approved legal/privacy/compliance evidence before any activation.
+- **Implementation:** Bind subject/payer/destination/screening and privacy-classified velocity/recovery signals; HOLD/REVIEW denies credit availability, lock and broadcast.
+- **Tests:** ACT-013 plus sanctions destination, mule linkage, rapid cash-out, device/credential recovery change and retention/immutable-exception tests.
+- **Acceptance criteria:** No spend path accepts stale/missing/HOLD/REVIEW decision; PII lifecycle has purpose, owner, retention/deletion and exception reference.
+- **Security implications:** Reduces sanctioned destination, mule, takeover and privacy over-collection risk.
+- **Observability:** Use bounded/pseudonymous reason codes, decision versions and correlation IDs; never log raw screening/PII payloads.
+- **Rollback:** Fail closed to HOLD; retain legally required minimised audit records; forward-fix rules with versioned re-evaluation.
+- **Definition of done:** Implementation+tests+contract/ADR links+docs+required CI checks PASS; no named Q gate unresolved for any claimed capability; verification evidence is bound to the exact SHA.
+
+## PR-141 — Exact mainnet gate binding, audit order and supply-chain boundary
+- **Milestone:** M20 Mainnet Assurance Amendment
+- **Objective:** Close release/mainnet assurance around exact authorization, atomic reservations, audit ordering, kill drills and protected evidence root.
+- **Scope:** MainnetAuthorization verification, audit sequencing/anchors, scoped kill drills, CI/OIDC/provenance and Vercel static-only boundary; excludes mainnet activation.
+- **Files:** `MAINNET_ACTIVATION_SPEC.md`, `READINESS_AUTHORIZATION.md`, `AUDIT_SPEC.md`, `CI_CD_SPEC.md`, `RELEASE_SPEC.md`, future tests/config snapshots.
+- **Dependencies:** PR-129, PR-130, PR-131, PR-132, PR-133, PR-140; Q-001, Q-002, Q-003, Q-004, Q-005, Q-006, Q-007, Q-008, Q-009 and Q-010, each explicit, current and scope-matching.
+- **Implementation:** Verify exact action/resource/amount/destination/gates/evidence/reservations/quorum; protect evidence root and release provenance; verify scoped kill propagation and static deploy boundary.
+- **Tests:** ACT-003, ACT-014, ACT-015, ACT-016 plus duplicate-principal quorum, reservation race, CI evidence substitution and Vercel-boundary negatives.
+- **Acceptance criteria:** Any mismatched/expired/revoked gate/evidence/signer/reservation/quorum denies before signing; static status deployment has no financial authority.
+- **Security implications:** Prevents approval laundering, audit rewrite races, kill-switch gaps and supply-chain/evidence-root substitution.
+- **Observability:** Record signed authorization/gate/evidence/reservation/quorum/provenance digests and drill results, never secret values.
+- **Rollback:** Revoke mainnet capability and freeze promotion; preserve immutable evidence/audit; containment only, never spend break-glass.
+- **Definition of done:** Implementation+tests+contract/ADR links+docs+required CI checks PASS; no named Q gate unresolved for any claimed capability; verification evidence is bound to the exact SHA.

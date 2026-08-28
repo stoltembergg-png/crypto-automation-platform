@@ -22,7 +22,7 @@ LP position, fees and valuations are evidence/reconciliation records; no raw on-
 
 ## State and failure semantics
 
-PROPOSED→RISK_ALLOWED→MINT_REQUESTED→ACTIVE→REBALANCE_REQUESTED|EXIT_REQUESTED→CLOSED|UNKNOWN.
+PROPOSED→RISK_ALLOWED→MINT_REQUESTED→OBSERVED→ACTIVE→REBALANCE_REQUESTED|EXIT_REQUESTED→CLOSED|REORGED|UNKNOWN. `ACTIVE` requires the applicable finality policy; reorg changes state to reconciliation-required and never silently preserves an active position.
 
 ## Future verification
 

@@ -8,9 +8,9 @@ Defines `MAINNET = BLOCKED` until every critical readiness row is independently 
 
 ## Normative requirements
 
-- Per-operation authorization binds tenant, capability, environment attestation, legal disposition, policy/risk/simulation/guard hashes, expiry, revocation and replay nonce.
-- Capital limits start minimal: global/per-strategy/per-trade/daily-loss/daily-volume/per-protocol.
-- Manual multiparty approval and non-spend break-glass containment are required governance gates.
+- Per-operation authorization binds exact action/resource fingerprint, tenant, capability, amount/asset/network/destination or envelope digest, environment attestation, named Q-gate registry digest and IDs, evidence, policy/risk/simulation/guard/compliance/fraud hashes, capital reservations, expiry, revocation and replay nonce.
+- Capital limits start minimal: global/per-strategy/per-trade/daily-loss/daily-volume/per-protocol and use atomic reservation/commit/release lifecycle; an authorization cannot reuse or exceed a reservation.
+- Manual distinct-principal multiparty approval and non-spend break-glass containment are required governance gates; generic `Q-001..Q-010 as applicable` is invalid.
 
 ## Component contracts
 

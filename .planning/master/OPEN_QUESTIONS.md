@@ -1,28 +1,28 @@
 # Open Questions and Assumptions Register
 
-All entries are blocking only for the named future scope. They do **not** block documentation-only planning, paper-market-data research, or non-financial repository governance.
+All entries are blocking only for their named future scope. They do **not** authorize financial activity; documentation planning remains allowed while each decision is unresolved. Q-ID semantics are defined only by `.planning/master/GATE_REGISTRY.md`.
 
 ## Open questions
 
-| ID | Decision needed | Owner | Blocks | Required evidence to close |
+| ID | Canonical decision needed | Owner | Blocks | Required evidence to evaluate |
 |---|---|---|---|---|
-| Q-001 | Legal entity, jurisdictions, target customer categories, and whether the product ever holds or administers third-party assets. | Founder + Brazilian financial/regulatory counsel | Any real-money scope | Written legal classification and operating model approval. |
-| Q-002 | Custody model and licensed/qualified custodian or MPC/HSM provider selection. | Founder + security + counsel | Wallet funding, crypto withdrawals, mainnet | Vendor due diligence, contracts, threat review, key-ceremony/runbook approval. |
-| Q-003 | Mercado Pago account type, contractual eligibility, Pix product/API, production webhook and payout capabilities. | Founder + payments + counsel | Production Pix funding or payout | Authenticated sandbox/production documentation and provider approval. |
-| Q-004 | KYC/KYT, sanctions, PEP/adverse media, transaction monitoring and case-management providers/processes. | Compliance owner + counsel | Onboarding and any real-money activity | Compliance program, vendor contract, test evidence, escalation ownership. |
-| Q-005 | Asset universe, supported BRL pairs, exchange roster, geographic restrictions, and stablecoin policy. | Product + treasury + compliance | Exchange/strategy activation | Approved asset/protocol/exchange registry with risk assessment. |
-| Q-006 | Investor/product suitability rules and whether automated execution is discretionary, advisory, or user-directed in each automation mode. | Counsel + product + compliance | AI_PROPOSE and AI_AUTO_WITH_LIMITS | Legal/product policy decision and user disclosures. |
-| Q-007 | Loss allocation, insolvency/segregation model, fee schedule, tax reporting obligations, and accounting policy. | Finance + counsel + accountant | Real funds, statements, withdrawals | Written accounting/tax/legal policy and reconciliation model approval. |
-| Q-008 | Security governance: named control owners, break-glass approvers, emergency contacts, vulnerability disclosure, incident response and insurance. | Founder + security | Testnet/mainnet | Approved runbooks, exercises and ownership roster. |
-| Q-009 | Mainnet admission authority, capital limits, capital source, and manual approval quorum. | Founder + treasury + counsel | MAINNET feature flag | Signed governance decision, funds provenance, gate evidence. |
-| Q-010 | Data-controller/processor roles, retention schedules, deletion/export rules, DPO/privacy-contact requirements, and cross-border transfer basis. | Privacy owner + counsel | Real PII | LGPD data map, legal basis, DPIA/records where required, retention approval. |
+| Q-001 | Legal entity, jurisdictions, target customer categories, operating model, and whether the product ever holds/administers third-party assets. | Founder + Brazilian financial/regulatory counsel | Any real-money scope | Written legal classification, scope/exceptions and operating-model approval. |
+| Q-002 | Mercado Pago account/product eligibility, production webhook/payout semantics, exchange/venue roster, and authenticated provider capability for the exact environment. | Provider operations + payments + counsel | Production Pix, venue or provider activation | Versioned provider terms/configuration, authenticated scope, sandbox/test boundary result and provider approval where required. |
+| Q-003 | Custody model, licensed/qualified custodian or MPC/HSM provider selection, wallet funding/withdrawal recovery, and signer key ceremony. | Founder + security + counsel | Wallet funding, crypto withdrawal, signing, mainnet | Vendor due diligence/contracts, threat review, key-ceremony/runbook and scoped behavior evidence. |
+| Q-004 | Loss allocation, insolvency/segregation, fee schedule, tax reporting, chart of accounts and correction/reconciliation accounting policy. | Finance + counsel + accountant | Real funds, statements, corrections, withdrawals | Written accounting/tax/legal policy and finance-controller approval. |
+| Q-005 | Asset universe, supported BRL pairs, network/protocol/exchange registry, geographic restrictions and stablecoin policy. | Product + treasury + compliance | Asset, protocol, exchange or strategy activation | Approved allowlist with risk assessment, monitoring and revocation process. |
+| Q-006 | Data-controller/processor roles, purpose limitation, retention, deletion/export, immutable-record exception, DPO/privacy contact and transfer basis. | Privacy owner + counsel | Real PII and privacy-sensitive provider integration | LGPD data map, legal basis, retention approval and required assessment/records. |
+| Q-007 | KYC/KYT, sanctions, PEP/adverse-media, transaction monitoring, case management, investor/product suitability, automation classification and fraud limits. | Compliance + risk + counsel + product | Onboarding, credit availability, withdrawal or any real-money automation | Approved compliance/fraud/suitability policy, vendor/process evidence, escalation ownership and boundary tests. |
+| Q-008 | Security control ownership, break-glass/reset approvers, emergency contacts, vulnerability disclosure, incident response, insurance and audit retention. | Founder + security/operations | Testnet, mainnet or privileged operations | Approved runbooks, drill evidence, immutable-retention design and ownership roster. |
+| Q-009 | Kernel implementation language/toolchain, reproducibility, module-boundary checks and team-operability evidence. | Engineering owner | Production kernel implementation selection | Comparative spike, threat-aware verification plan and team-operability decision. |
+| Q-010 | CI/release authority, protected supply chain, static Vercel boundary, mainnet admission authority, capital source/limits and distinct-principal approval quorum. | Release/governance + founder + treasury + counsel | Release/mainnet feature flag | Signed governance decision, protected configuration snapshot, provenance evidence and gate evidence. |
 
 ## Assumptions used only to shape the plan
 
 | ID | Assumption | Status | Containment |
 |---|---|---|---|
-| ASM-001 | Brazil/Pix/Mercado Pago is the first operating context. | supplied, not legal conclusion | Compliance document labels every resulting obligation `REQUIRES_LEGAL_REVIEW`. |
-| ASM-002 | Initial production scope, if ever admitted, is conservative and capital-limited rather than high-frequency or leveraged. | architectural recommendation | Futures, margin, leverage, bridges, and arbitrary contracts are disabled-by-default. |
+| ASM-001 | Brazil/Pix/Mercado Pago is the first operating context. | supplied, not legal conclusion | Compliance material labels resulting obligations `REQUIRES_LEGAL_REVIEW`. |
+| ASM-002 | Initial production scope, if ever admitted, is conservative and capital-limited rather than high-frequency or leveraged. | architectural recommendation | Futures, margin, leverage, bridges and arbitrary contracts remain disabled-by-default. |
 | ASM-003 | EVM networks can share an adapter family; Solana needs a separate adapter family and is deferred. | architectural hypothesis | ADR and contract tests must validate this before code creates a universal chain abstraction. |
-| ASM-004 | A modular monolith is sufficient for early phases. | pending adversarial review | Module contracts and transactional outbox preserve a later extraction path. |
-| ASM-005 | The Vercel `develop` page is a static planning-status view only. | supplied delivery interpretation | It exposes no financial or operational control, credentials, balances, or provider integrations. |
+| ASM-004 | A modular monolith is sufficient only with module-owned persistence, explicit contracts, no-cross-module-write rule and a capability-scoped transaction kernel. | refined by adversarial review | Boundary tests and extraction criteria are mandatory before implementation. |
+| ASM-005 | The Vercel `develop` page is a static planning-status view only. | supplied delivery interpretation | It exposes no financial/operational control, credentials, balances or provider integration. |

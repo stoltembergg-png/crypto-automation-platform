@@ -10,6 +10,8 @@ Defines last deterministic pre-signing validation.
 
 - Pipeline: decoder→allowlist→amount/token/contract/function→slippage→risk→simulation→authorization binding→signer request.
 - Permit finite action templates only; decoded candidate and signer payload must hash-equate approved plan.
+- The accepted envelope is finite/versioned and recursively decoded: every nested permit, approval, unwrap/sweep, recipient, spender, value, deadline and target must bind to the approved plan; unsupported dynamic subcalls deny.
+- Simulation/guard evidence binds a pinned block and target code/proxy implementation digest. Changed state/finality assumption, code, channel or fallback requires fresh simulation and authorization.
 - Verify mainnet authorization/environment attestation at privileged spend boundary.
 
 ## Component contracts

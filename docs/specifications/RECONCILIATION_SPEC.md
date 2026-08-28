@@ -9,8 +9,9 @@ Defines periodic and event-driven comparison of ledger with payment, exchange, w
 ## Normative requirements
 
 - Reconcile internal ledger, exchange balances, wallet balances, on-chain positions, protocol positions and Mercado Pago transaction evidence.
-- Difference creates immutable case with severity, evidence, owner, aging SLA and capability-block scope.
-- Reconciliation cannot silently mutate balance; any correction follows accounting authority.
+- `ReconciliationRun` binds tenant/environment, internal-ledger cutoff, source account/asset scope, observation IDs/digests, retrieval time/cursor, completeness, chain block/finality where relevant, tolerance/policy version and reviewer.
+- Difference creates immutable case with severity, evidence, owner, aging SLA and capability-block scope. `MATCHED` requires a complete comparable cut; otherwise status is PENDING, MISSING_EVIDENCE, STALE or MISMATCH.
+- Reconciliation cannot silently mutate balance or issue an AccountingCommand. It creates a CorrectionProposal; independent Accounting Authority authorization and audit correlation are required before any Ledger command.
 
 ## Component contracts
 

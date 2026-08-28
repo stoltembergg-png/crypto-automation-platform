@@ -1203,5 +1203,85 @@
       "PR-128",
       "PR-132"
     ]
+  },
+  {
+    "id": "PR-134",
+    "milestone": "M0 Post-Review Planning Closure",
+    "title": "Canonical gate registry and specification precedence",
+    "slug": "canonical-gate-registry-and-precedence",
+    "deps": [
+      "PR-001"
+    ]
+  },
+  {
+    "id": "PR-135",
+    "milestone": "M3 Ledger Amendment",
+    "title": "Tenant and environment ledger boundary",
+    "slug": "tenant-environment-ledger-boundary",
+    "deps": [
+      "PR-008",
+      "PR-134"
+    ]
+  },
+  {
+    "id": "PR-136",
+    "milestone": "M5 Withdrawal Amendment",
+    "title": "Withdrawal intent, one-lock and ambiguous broadcast protocol",
+    "slug": "withdrawal-intent-one-lock-ambiguous-broadcast",
+    "deps": [
+      "PR-027",
+      "PR-135"
+    ]
+  },
+  {
+    "id": "PR-137",
+    "milestone": "M9 Reconciliation Amendment",
+    "title": "Comparable-cut reconciliation and accounting authority",
+    "slug": "comparable-cut-reconciliation-authority",
+    "deps": [
+      "PR-054",
+      "PR-135"
+    ]
+  },
+  {
+    "id": "PR-138",
+    "milestone": "M11 Arbitrage Amendment",
+    "title": "Residual PnL, quote reservation and non-vacuous backtesting",
+    "slug": "residual-pnl-quote-reservation-backtesting",
+    "deps": [
+      "PR-068"
+    ]
+  },
+  {
+    "id": "PR-139",
+    "milestone": "M13 DEX Amendment",
+    "title": "Recursive transaction envelope, finality and MEV submission policy",
+    "slug": "recursive-envelope-finality-mev-policy",
+    "deps": [
+      "PR-074"
+    ]
+  },
+  {
+    "id": "PR-140",
+    "milestone": "M19 Compliance Amendment",
+    "title": "Execution-bound compliance, fraud and privacy decisions",
+    "slug": "execution-bound-compliance-fraud-privacy",
+    "deps": [
+      "PR-117"
+    ]
+  },
+  {
+    "id": "PR-141",
+    "milestone": "M20 Mainnet Assurance Amendment",
+    "title": "Exact mainnet gate binding, audit order and supply-chain boundary",
+    "slug": "exact-mainnet-gates-audit-supply-chain",
+    "deps": [
+      "PR-129",
+      "PR-130",
+      "PR-131",
+      "PR-132",
+      "PR-133",
+      "PR-140"
+    ]
   }
 ]

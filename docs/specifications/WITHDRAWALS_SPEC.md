@@ -23,7 +23,9 @@ Idempotency scope is tenant+operation fingerprint+lifecycle/TTL; only same-finge
 
 ## State and failure semantics
 
-REQUESTED→SECURITY_PENDING→RISK_PENDING→AUTHORIZED→LOCKED→PROCESSING→SUBMITTED|AMBIGUOUS→CONFIRMING→COMPLETED|FAILED|CANCELLED|RECONCILIATION_REQUIRED.
+`INTENT_CREATED→SECURITY_PENDING→RISK_PENDING→COMPLIANCE_PENDING→PREAUTHORIZED→LOCK_POSTED→PROCESSING→SUBMITTED→CONFIRMING→COMPLETED|FAILED|CANCELLED|BROADCAST_AMBIGUOUS`.
+
+`PREAUTHORIZED` has no ledger effect. `LOCK_POSTED` atomically verifies fresh availability and all named decisions then posts one idempotent funding lock. Timeouts/unknown provider results stay non-terminal until reconciliation. `BROADCAST_AMBIGUOUS` prohibits retry/rebroadcast on the original attempt; only correlation-matching external evidence can settle it. A new broadcast must use a linked new intent, fresh idempotency key, authorization, lock and evidence. See `docs/security/ADVERSARIAL_CLOSURE_SPEC.md` §3.2.
 
 ## Future verification
 

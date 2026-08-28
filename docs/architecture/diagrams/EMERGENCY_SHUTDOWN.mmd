@@ -1,11 +1,18 @@
 flowchart TB
-  ALERT[Alert/Mismatch/Operator]-->SCOPE{Scope}
+  ALERT[Alert/Mismatch/Operator]-->SCOPE{Scope and subject match}
   SCOPE-->G[Global Kill]
   SCOPE-->U[User Kill]
   SCOPE-->ST[Strategy Kill]
   SCOPE-->PR[Protocol Kill]
   SCOPE-->CH[Chain Kill]
   SCOPE-->EX[Exchange Kill]
-  G-->DENY[Guard Denies New Spend]
-  DENY-->AUD[Audit + Incident]
-  AUD-->REC[Reconcile/Contain]
+  G-->DENY[Common scope-matching deny before sign/submit]
+  U-->DENY
+  ST-->DENY
+  PR-->DENY
+  CH-->DENY
+  EX-->DENY
+  DENY-->IF[Contain in-flight work by policy]
+  IF-->AUD[Audit + Incident]
+  AUD-->REC[Reconcile / Contain]
+  RESET[Authorized reset/revocation]-->SCOPE

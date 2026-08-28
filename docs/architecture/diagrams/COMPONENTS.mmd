@@ -1,15 +1,19 @@
 flowchart LR
   ID[Identity]-->PORT[Portfolio]
-  PORT-->LED[Ledger]
-  PAY[Payment]-->LED
-  WD[Withdrawal]-->LED
+  PORT-->LED[Ledger: AccountingCommand only]
+  PAY[Payment Evidence]-->REC[Reconciliation]
+  WD[Withdrawal Evidence]-->REC
   MD[Market Data]-->STR[Strategy]
   AI[AI Orchestrator]-->STR
-  STR-->RISK[Risk/Policy]
+  STR-->RISK[Risk/Policy/Compliance/Fraud]
   RISK-->SIM[Simulation]
   SIM-->GUARD[Transaction Guard]
   GUARD-->EXEC[Execution]
-  EXEC-->REC[Reconciliation]
-  REC-->LED
+  EXEC-->REC
+  REC-->CP[Correction Proposal]
+  CP-->AA[Accounting Authority]
+  AA-->AC[Authorized AccountingCommand]
+  AC-->LED
   AUD[Audit]---ID
   AUD---EXEC
+  AUD---AA

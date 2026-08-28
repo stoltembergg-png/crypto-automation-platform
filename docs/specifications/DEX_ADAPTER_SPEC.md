@@ -11,6 +11,8 @@ Defines DEX adapter and protocol registry boundary for quotes, swaps and liquidi
 - Methods: getQuote, getPool, getLiquidity, getPriceImpact, buildSwap, simulateSwap, getLPPosition, addLiquidity, removeLiquidity, collectFees.
 - Protocol is admitted only through registry record: address/chain, bytecode/proxy/implementation, audit/age/TVL/permissions/upgrade/pause/exploit history/risk score.
 - BuildSwap returns a candidate decoded action; Transaction Guard constructs or validates a finite template, never arbitrary AI calldata.
+- The finite/versioned envelope recursively decodes all supported nested router commands. Each nested token, spender, recipient, amount/value, deadline, permit, unwrap/sweep, approval and target binds to the approved plan; unknown dynamic subcalls deny.
+- Upgradeable targets bind proxy type, implementation/beacon slot, code hashes and pinned block. Any change requires resimulation and reauthorization; an upgradeable target needs an explicit safe-policy disposition.
 
 ## Component contracts
 

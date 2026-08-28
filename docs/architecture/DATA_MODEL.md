@@ -18,7 +18,7 @@ TenantScopedRow, ImmutableJournalEntry, Posting, ProviderEvidence, OutboxMessage
 
 ## Invariants and deny conditions
 
-Row-level policy and application authorization must agree; every financial mutation has correlation/idempotency keys; posted journal rows are immutable; corrections are compensating entries.
+Row-level policy and application authorization must agree; every financial mutation has correlation/idempotency keys; posted journal rows are immutable; corrections are compensating entries. Accounts, events, journal entries and postings carry tenant/environment and use composite scoped foreign keys. A balanced entry spanning tenants/environments is denied even for service roles/migrations. The Ledger accepts only an Accounting Authority-issued `AccountingCommand.v1`; direct reconciliation/adapter/AI writes are denied. `GLOBAL` classification is server-derived and permitted only for enumerated immutable public reference data, never authority, ledger, execution, audit, provider, personal or financial data.
 
 ## State and failure semantics
 
