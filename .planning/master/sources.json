@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14478.htm",
+      "title": "",
+      "accessed": "2026-08-28"
+    },
+    {
+      "id": 2,
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm",
+      "title": "",
+      "accessed": "2026-08-28"
+    },
+    {
+      "id": 3,
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/criptoativos",
+      "title": "",
+      "accessed": "2026-08-28"
+    },
+    {
+      "id": 4,
+      "url": "https://www.mercadopago.com.br/developers/pt/docs/checkout-api-orders/payment-integration/pix",
+      "title": "",
+      "accessed": "2026-08-28"
+    },
+    {
+      "id": 5,
+      "url": "https://www.mercadopago.com.br/developers/pt/docs/your-integrations/notifications/webhooks",
+      "title": "",
+      "accessed": "2026-08-28"
+    },
+    {
+      "id": 6,
+      "url": "https://eips.ethereum.org/EIPS/eip-1193",
+      "title": "",
+      "accessed": "2026-08-28"
+    },
+    {
+      "id": 7,
+      "url": "https://eips.ethereum.org/EIPS/eip-4361",
+      "title": "",
+      "accessed": "2026-08-28"
+    },
+    {
+      "id": 8,
+      "url": "https://www.w3.org/TR/webauthn-3",
+      "title": "",
+      "accessed": "2026-08-28"
+    }
+  ]
+}

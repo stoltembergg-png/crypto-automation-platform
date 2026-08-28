@@ -1,0 +1,34 @@
+sequenceDiagram
+  participant S as Strategy/AI/User
+  participant K as Policy Kernel
+  participant R as Independent Risk Gate
+  participant L as Ledger
+  participant G as Execution Guard
+  participant A as Privileged Adapter
+  participant V as Venue/Wallet/Chain
+  participant C as Reconciliation
+
+  S->>K: Typed versioned proposal
+  K->>K: Validate tenant/env/action/policy/legal
+  alt denied or legal review required
+    K-->>S: DENIED / REQUIRES_LEGAL_REVIEW
+  else policy acceptable
+    K->>R: Risk evaluation
+    R-->>K: ALLOW or DENY
+    alt economic lock required and all gates allow
+      K->>L: Authorized AccountingCommand (post once)
+      L-->>K: AccountingEvent + local outbox record
+    end
+    K->>G: Authorized privileged request
+    G->>G: Recheck signed auth, capability, expiry, revocation, replay, env attestation
+    alt mismatch
+      G-->>K: DENIED; bounded audit telemetry
+    else valid
+      G->>A: Scoped adapter command
+      A->>V: External delivery attempt
+      V-->>A: Untrusted observation / unknown result
+      A-->>C: Correlated evidence fact
+      C-->>L: Never direct balance mutation
+      C-->>K: Correction proposal only if required
+    end
+  end

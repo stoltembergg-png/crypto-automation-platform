@@ -1,0 +1,24 @@
+stateDiagram-v2
+  [*] --> IntentCreated
+  IntentCreated --> LockPosted: authority + accounting allow
+  IntentCreated --> Denied: invalid/legal/risk/capability failure
+  LockPosted --> Authorized: signed authorization valid
+  LockPosted --> Expired: expiry/revocation
+  Authorized --> BroadcastRequested: environment attestation valid
+  BroadcastRequested --> BroadcastEvidenced: evidence observed
+  BroadcastRequested --> BroadcastAmbiguous: timeout/unknown delivery
+  BroadcastRequested --> BroadcastRejected: evidence of rejection
+  BroadcastEvidenced --> Confirmed: chain/venue finality evidence
+  BroadcastEvidenced --> Reorged: reorg/conflict evidence
+  BroadcastAmbiguous --> ReconciliationRequired
+  BroadcastRejected --> ReconciliationRequired
+  Reorged --> ReconciliationRequired
+  ReconciliationRequired --> CorrectionProposed: separate authority flow
+  CorrectionProposed --> [*]
+  Confirmed --> [*]
+  Denied --> [*]
+  Expired --> [*]
+  note right of BroadcastAmbiguous
+    Prohibit automatic retry and
+    a second economic mutation.
+  end note

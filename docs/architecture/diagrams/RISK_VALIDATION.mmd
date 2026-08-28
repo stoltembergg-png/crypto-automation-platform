@@ -1,0 +1,12 @@
+flowchart LR
+  I[Intent + Snapshot]-->K[Kill Switch]
+  K-->E[Exposure Limits]
+  E-->Q[Price/Slippage/Impact]
+  Q-->P[Protocol/Provider Claim]
+  P-->M[Maturity/Mainnet Authorization]
+  M-->A[ALLOW]
+  K-->D[DENY]
+  E-->D
+  Q-->D
+  P-->D
+  M-->D

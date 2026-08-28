@@ -1,0 +1,9 @@
+flowchart LR
+  P[Approved Plan Hash]-->D[Decode Template]
+  D-->AL[Allowlist]
+  AL-->V[Value/Token/Nonce/Chain]
+  V-->SIM[Simulation TTL]
+  SIM-->MA[Mainnet Authorization]
+  MA-->SR[Signer Request]
+  SR-->SIG[External Signer]
+  SIG-->EV[Submission Evidence]

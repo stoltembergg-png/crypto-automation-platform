@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "required_files": 82,
+  "missing": [],
+  "adr_count": 15,
+  "diagram_count": 13,
+  "contract_count": 10,
+  "queue_card_count": 133,
+  "dag_acyclic": true,
+  "traceability_rows": 68,
+  "mainnet": "BLOCKED",
+  "note": "PASS validates document topology only; it is not implementation, provider, legal, security, test, deployment or mainnet proof."
+}

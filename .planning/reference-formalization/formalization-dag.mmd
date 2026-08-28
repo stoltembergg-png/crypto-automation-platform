@@ -1,0 +1,58 @@
+flowchart TD
+  M0[M0 Charter and planning-only boundary] --> M1[M1 Q-gate register]
+  M0 --> M2[M2 Domain, data and trust]
+  M1 --> M3[M3 Core ADRs and contract governance]
+  M2 --> M3
+  M3 --> M4[M4 Ledger and accounting]
+  M2 --> M4
+  Q004{Q-004 Accounting} -.blocks.-> M4
+  M4 --> M5[M5 Payments]
+  Q001{Q-001 Legal} -.blocks.-> M5
+  Q002{Q-002 Provider claims} -.blocks.-> M5
+  M4 --> M6[M6 Withdrawal and wallet denial]
+  Q001 -.blocks.-> M6
+  Q002 -.blocks.-> M6
+  Q003{Q-003 Signing/custody} -.blocks.-> M6
+  M2 --> M7[M7 Markets and exchange]
+  Q002 -.blocks.-> M7
+  Q005{Q-005 Assets/chains/venues} -.blocks.-> M7
+  M7 --> M8[M8 Chain and DEX]
+  M8 --> M9[M9 Arbitrage and LP]
+  Q007{Q-007 Risk appetite} -.blocks.-> M9
+  M3 --> M10[M10 Strategy, AI and risk]
+  M4 --> M10
+  Q007 -.blocks.-> M10
+  M5 --> M11[M11 Execution guard and reconciliation]
+  M6 --> M11
+  M7 --> M11
+  M8 --> M11
+  M9 --> M11
+  M10 --> M11
+  M2 --> M12[M12 Auth, threat and security]
+  M3 --> M12
+  Q006{Q-006 Identity/privacy} -.blocks.-> M12
+  M11 --> M13[M13 Audit and observability]
+  M12 --> M13
+  Q008{Q-008 Operations/retention} -.blocks.-> M13
+  M9 --> M14[M14 Backtest/paper/testnet]
+  M10 --> M14
+  M11 --> M14
+  M12 --> M14
+  M13 --> M14
+  M6 --> M15[M15 Mainnet authorization/attestation]
+  M11 --> M15
+  M12 --> M15
+  M13 --> M15
+  M14 --> M15
+  M15 --> M16[M16 CI and verification gates]
+  Q009{Q-009 Language evaluation} -.blocks.-> M16
+  Q010{Q-010 Release/deploy authority} -.blocks.-> M16
+  M16 --> M17[M17 Release / planning-only Vercel]
+  M5 --> M18[M18 Compliance]
+  M15 --> M18
+  M17 --> M19[M19 Adversarial review]
+  M18 --> M19
+  M19 --> M20[M20 Baseline freeze: MAINNET BLOCKED]
+
+  classDef critical fill:#fee2e2,stroke:#b91c1c,stroke-width:2px,color:#450a0a;
+  class M0,M1,M3,M4,M6,M11,M13,M14,M15,M16,M18,M19,M20 critical;

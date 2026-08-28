@@ -1,0 +1,1 @@
+ Banco Central do Brasil Essa pagina depende do javascript para abrir, favor habilitar o javascript do seu browser! new window.VLibras.Widget({ rootPath: '/assets/vlibras', //personalization: 'https://vlibras.gov.br/config/default_logo.json', opacity: 1, position: 'R', avatar: 'icaro' });

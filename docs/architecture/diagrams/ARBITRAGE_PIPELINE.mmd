@@ -1,0 +1,9 @@
+flowchart LR
+  M[Market Data]-->N[Normalize/Freshness]
+  N-->O[Opportunity Graph]
+  O-->F[Fees/Slippage/Latency]
+  F-->L[Liquidity/Exposure]
+  L-->R[Risk Policy]
+  R-->S[Simulation]
+  S-->G[Guard]
+  G-->D[Proposal or Denial]

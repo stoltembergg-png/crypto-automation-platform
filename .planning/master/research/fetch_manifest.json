@@ -1,0 +1,38 @@
+{
+  "mercadopago_webhooks": {
+    "url": "https://www.mercadopago.com.br/developers/pt/docs/your-integrations/notifications/webhooks",
+    "status": 200,
+    "bytes": 241993,
+    "sha256": "8e1037ea05d454b133c4ffe331c8ecca45fb4fa6203169d55323c1ff0b2c7779"
+  },
+  "mercadopago_pix": {
+    "url": "https://www.mercadopago.com.br/developers/pt/docs/checkout-api-orders/payment-integration/pix",
+    "status": 200,
+    "bytes": 258048,
+    "sha256": "e1a7bf7a70985dd1247d74aabc2b8812c96f08731af7bfb156fb50c18548686b"
+  },
+  "bcb_criptoativos": {
+    "url": "https://www.bcb.gov.br/estabilidadefinanceira/criptoativos",
+    "status": 200,
+    "bytes": 2871,
+    "sha256": "40df034b6b4f975c96f785a359da4ce4bf48572fcbc52ee96ad2a2d934f37952"
+  },
+  "eip1193": {
+    "url": "https://eips.ethereum.org/EIPS/eip-1193",
+    "status": 200,
+    "bytes": 71338,
+    "sha256": "7a29e3f43c262ad3f663b8f419257132c127e1580c91cbe837d59f86a5bd7ab4"
+  },
+  "eip4361": {
+    "url": "https://eips.ethereum.org/EIPS/eip-4361",
+    "status": 200,
+    "bytes": 53863,
+    "sha256": "0530d2eb496ab9f9061474a68a4b1e280692c46c533f1a5f1541a1a741aed663"
+  },
+  "webauthn3": {
+    "url": "https://www.w3.org/TR/webauthn-3/",
+    "status": 200,
+    "bytes": 2739242,
+    "sha256": "157030c980d44a3ce4b1ec5bcfaa16790c7dfefac20709af6ed2b11c7120970b"
+  }
+}

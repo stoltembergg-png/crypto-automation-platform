@@ -1,0 +1,14 @@
+sequenceDiagram
+  participant U as User
+  participant API
+  participant PAY as Payment Module
+  participant MP as Mercado Pago (future)
+  participant L as Ledger
+  participant R as Reconciliation
+  U->>API: request deposit
+  API->>PAY: create internal intent
+  PAY->>MP: create Pix only if claim active
+  MP-->>PAY: webhook evidence (untrusted)
+  PAY->>MP: canonical query
+  PAY->>R: correlate evidence
+  R->>L: authorized accounting event only after policy

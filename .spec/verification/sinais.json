@@ -1,0 +1,41 @@
+{
+  "schema": 1,
+  "sinais": {
+    "STATUS_INVALIDO::crypto-automation-platform-planning::.spec\\features\\crypto-automation-platform-planning\\spec.md": {
+      "codigo": "STATUS_INVALIDO",
+      "feature": "crypto-automation-platform-planning",
+      "ref": ".spec\\features\\crypto-automation-platform-planning\\spec.md",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-08-28T22:03:53.709Z",
+      "ultimaVez": "2026-08-28T22:03:53.709Z",
+      "gitRev": null
+    },
+    "Q_ABERTA::crypto-automation-platform-planning::Q-001": {
+      "codigo": "Q_ABERTA",
+      "feature": "crypto-automation-platform-planning",
+      "ref": "Q-001",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-08-28T22:07:36.291Z",
+      "ultimaVez": "2026-08-28T22:07:36.292Z",
+      "gitRev": null
+    },
+    "Q_ABERTA::crypto-automation-platform-planning::Q-002": {
+      "codigo": "Q_ABERTA",
+      "feature": "crypto-automation-platform-planning",
+      "ref": "Q-002",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-08-28T22:07:36.292Z",
+      "ultimaVez": "2026-08-28T22:07:36.292Z",
+      "gitRev": null
+    },
+    "Q_ABERTA::crypto-automation-platform-planning::Q-003": {
+      "codigo": "Q_ABERTA",
+      "feature": "crypto-automation-platform-planning",
+      "ref": "Q-003",
+      "ocorrencias": 1,
+      "primeiraVez": "2026-08-28T22:07:36.292Z",
+      "ultimaVez": "2026-08-28T22:07:36.292Z",
+      "gitRev": null
+    }
+  }
+}

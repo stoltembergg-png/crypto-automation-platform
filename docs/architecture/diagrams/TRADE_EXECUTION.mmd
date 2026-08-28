@@ -1,0 +1,15 @@
+sequenceDiagram
+ participant ST as Strategy
+ participant R as Risk/Policy
+ participant S as Simulator
+ participant G as Guard
+ participant X as Executor
+ participant A as Adapter
+ participant Q as Reconciliation
+ ST->>R: proposal hash
+ R->>S: allowed scoped action
+ S->>G: simulation evidence
+ G->>X: exact signer/execution intent
+ X->>A: bounded submission
+ A-->>Q: external evidence
+ Q-->>X: reconciled/unknown

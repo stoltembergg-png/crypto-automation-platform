@@ -1,0 +1,15 @@
+flowchart LR
+  ID[Identity]-->PORT[Portfolio]
+  PORT-->LED[Ledger]
+  PAY[Payment]-->LED
+  WD[Withdrawal]-->LED
+  MD[Market Data]-->STR[Strategy]
+  AI[AI Orchestrator]-->STR
+  STR-->RISK[Risk/Policy]
+  RISK-->SIM[Simulation]
+  SIM-->GUARD[Transaction Guard]
+  GUARD-->EXEC[Execution]
+  EXEC-->REC[Reconciliation]
+  REC-->LED
+  AUD[Audit]---ID
+  AUD---EXEC

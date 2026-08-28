@@ -1,0 +1,23 @@
+stateDiagram-v2
+  [*] --> Received
+  Received --> Validated
+  Received --> Malformed
+  Validated --> Authorized
+  Validated --> Conflict
+  Authorized --> CaptureRequested
+  CaptureRequested --> CaptureEvidenced
+  CaptureEvidenced --> SettlementObserved
+  SettlementObserved --> Reconciled
+  CaptureEvidenced --> FeeAssessed
+  FeeAssessed --> ReconciliationRequired
+  SettlementObserved --> ReversalObserved
+  ReversalObserved --> ReconciliationRequired
+  SettlementObserved --> RefundRequested
+  RefundRequested --> RefundEvidenced
+  RefundEvidenced --> ReconciliationRequired
+  ReconciliationRequired --> CorrectionProposed
+  CorrectionProposed --> Reconciled
+  note right of ReconciliationRequired
+    External fact does not directly
+    post or repair a balance.
+  end note

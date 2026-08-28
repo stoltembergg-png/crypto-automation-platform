@@ -1,0 +1,8 @@
+flowchart TB
+  UI[Next.js candidate UI]-->API[API/BFF]
+  API-->MM[Modular Monolith]
+  MM-->PG[(PostgreSQL: ledger/inbox/outbox/audit)]
+  MM-->SSE[SSE projection stream]
+  MM-->CAP[Capability-scoped adapters]
+  CAP-->EXT[Payment/Exchange/Wallet/RPC/AI]
+  MM-->ANCHOR[Future independent audit anchor]

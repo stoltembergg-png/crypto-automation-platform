@@ -1,0 +1,41 @@
+flowchart LR
+  subgraph U[Untrusted inputs]
+    UI[User/browser/wallet]
+    AI[AI / strategy output]
+    P[Provider / venue / chain]
+  end
+  subgraph M[Modular monolith — module-owned persistence]
+    ID[Identity & Tenant]
+    PA[Policy & Authority]
+    R[Risk]
+    E[Execution Guard]
+    L[Ledger]
+    X[Reconciliation]
+    A[Audit & Observability]
+    O[Local Outbox / Inbox]
+  end
+  subgraph XZ[External systems — not atomic with monolith]
+    AD[Attenuated adapters]
+    V[Venue / Wallet / Chain]
+  end
+  UI --> ID
+  UI --> PA
+  AI --> PA
+  P --> X
+  PA --> R --> E
+  E -->|authorized accounting command| L
+  L --> O
+  E -->|capability + signed auth only| AD --> V
+  V -->|untrusted evidence| X
+  O --> X
+  X -->|authorized correction proposal only| PA
+  PA --> A
+  L --> A
+  E --> A
+  X --> A
+  classDef untrusted fill:#fee2e2,stroke:#b91c1c;
+  classDef control fill:#dbeafe,stroke:#1d4ed8;
+  classDef ledger fill:#dcfce7,stroke:#15803d;
+  class UI,AI,P untrusted;
+  class PA,R,E control;
+  class L ledger;

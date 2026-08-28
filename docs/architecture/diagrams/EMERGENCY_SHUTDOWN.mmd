@@ -1,0 +1,11 @@
+flowchart TB
+  ALERT[Alert/Mismatch/Operator]-->SCOPE{Scope}
+  SCOPE-->G[Global Kill]
+  SCOPE-->U[User Kill]
+  SCOPE-->ST[Strategy Kill]
+  SCOPE-->PR[Protocol Kill]
+  SCOPE-->CH[Chain Kill]
+  SCOPE-->EX[Exchange Kill]
+  G-->DENY[Guard Denies New Spend]
+  DENY-->AUD[Audit + Incident]
+  AUD-->REC[Reconcile/Contain]

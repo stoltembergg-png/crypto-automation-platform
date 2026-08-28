@@ -1,0 +1,11 @@
+flowchart LR
+  C[Redacted Context]-->AI[AI Provider]
+  AI-->P[Typed Proposal]
+  P-->SV[Schema/Version]
+  SV-->R[Risk]
+  R-->PO[Policy]
+  PO-->SI[Simulation]
+  SI-->TG[Transaction Guard]
+  TG-->EI[Execution Intent]
+  EI-->AU[Audit]
+  SV-->DN[Denied + redacted audit]

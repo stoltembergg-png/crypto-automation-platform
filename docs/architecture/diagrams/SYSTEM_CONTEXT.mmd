@@ -1,0 +1,15 @@
+flowchart LR
+  U[User]-->W[Web Dashboard]
+  W-->A[API / Modular Monolith]
+  A-->I[Identity]
+  A-->L[Ledger]
+  A-->P[Payment Module]
+  A-->S[Strategy / AI Proposal]
+  S-->R[Risk + Policy]
+  R-->G[Simulation + Transaction Guard]
+  G-->X[Privileged Execution Boundary]
+  X-->E[Exchange / Chain / DEX Adapters]
+  E-->C[External Evidence]
+  C-->Q[Reconciliation]
+  Q-->L
+  A-->AU[Append-only Audit]

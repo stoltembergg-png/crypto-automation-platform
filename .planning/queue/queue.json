@@ -1,0 +1,1207 @@
+[
+  {
+    "id": "PR-001",
+    "milestone": "M1 Repository Foundation",
+    "title": "Repository bootstrap and contribution governance",
+    "slug": "repository-bootstrap-and-contribution-governance",
+    "deps": []
+  },
+  {
+    "id": "PR-002",
+    "milestone": "M1 Repository Foundation",
+    "title": "Planning validation harness",
+    "slug": "planning-validation-harness",
+    "deps": [
+      "PR-001"
+    ]
+  },
+  {
+    "id": "PR-003",
+    "milestone": "M1 Repository Foundation",
+    "title": "Workspace and package boundary decision spike",
+    "slug": "workspace-and-package-boundary-decision-spike",
+    "deps": [
+      "PR-001"
+    ]
+  },
+  {
+    "id": "PR-004",
+    "milestone": "M1 Repository Foundation",
+    "title": "Language/toolchain evidence spike",
+    "slug": "language-toolchain-evidence-spike",
+    "deps": [
+      "PR-001"
+    ]
+  },
+  {
+    "id": "PR-005",
+    "milestone": "M1 Repository Foundation",
+    "title": "Documentation navigation and artifact manifest",
+    "slug": "documentation-navigation-and-artifact-manifest",
+    "deps": [
+      "PR-001"
+    ]
+  },
+  {
+    "id": "PR-006",
+    "milestone": "M1 Repository Foundation",
+    "title": "GitHub branch/ruleset evidence capture",
+    "slug": "github-branch-ruleset-evidence-capture",
+    "deps": [
+      "PR-001"
+    ]
+  },
+  {
+    "id": "PR-007",
+    "milestone": "M1 Repository Foundation",
+    "title": "Vercel develop status-only deployment contract",
+    "slug": "vercel-develop-status-only-deployment-contract",
+    "deps": [
+      "PR-001"
+    ]
+  },
+  {
+    "id": "PR-008",
+    "milestone": "M2 Identity & Security",
+    "title": "Identity domain primitives",
+    "slug": "identity-domain-primitives",
+    "deps": [
+      "PR-001"
+    ]
+  },
+  {
+    "id": "PR-009",
+    "milestone": "M2 Identity & Security",
+    "title": "User registration contract",
+    "slug": "user-registration-contract",
+    "deps": [
+      "PR-008"
+    ]
+  },
+  {
+    "id": "PR-010",
+    "milestone": "M2 Identity & Security",
+    "title": "Passkey enrollment",
+    "slug": "passkey-enrollment",
+    "deps": [
+      "PR-008"
+    ]
+  },
+  {
+    "id": "PR-011",
+    "milestone": "M2 Identity & Security",
+    "title": "Passkey login",
+    "slug": "passkey-login",
+    "deps": [
+      "PR-008"
+    ]
+  },
+  {
+    "id": "PR-012",
+    "milestone": "M2 Identity & Security",
+    "title": "TOTP recovery contract",
+    "slug": "totp-recovery-contract",
+    "deps": [
+      "PR-008"
+    ]
+  },
+  {
+    "id": "PR-013",
+    "milestone": "M2 Identity & Security",
+    "title": "Session rotation",
+    "slug": "session-rotation",
+    "deps": [
+      "PR-008"
+    ]
+  },
+  {
+    "id": "PR-014",
+    "milestone": "M2 Identity & Security",
+    "title": "Device/security events",
+    "slug": "device-security-events",
+    "deps": [
+      "PR-008"
+    ]
+  },
+  {
+    "id": "PR-015",
+    "milestone": "M2 Identity & Security",
+    "title": "Authorization context",
+    "slug": "authorization-context",
+    "deps": [
+      "PR-008"
+    ]
+  },
+  {
+    "id": "PR-016",
+    "milestone": "M2 Identity & Security",
+    "title": "Tenant RLS baseline",
+    "slug": "tenant-rls-baseline",
+    "deps": [
+      "PR-008"
+    ]
+  },
+  {
+    "id": "PR-017",
+    "milestone": "M3 Ledger",
+    "title": "Money and quantity types",
+    "slug": "money-and-quantity-types",
+    "deps": [
+      "PR-008"
+    ]
+  },
+  {
+    "id": "PR-018",
+    "milestone": "M3 Ledger",
+    "title": "Asset registry",
+    "slug": "asset-registry",
+    "deps": [
+      "PR-017"
+    ]
+  },
+  {
+    "id": "PR-019",
+    "milestone": "M3 Ledger",
+    "title": "Ledger chart of accounts",
+    "slug": "ledger-chart-of-accounts",
+    "deps": [
+      "PR-017"
+    ]
+  },
+  {
+    "id": "PR-020",
+    "milestone": "M3 Ledger",
+    "title": "Journal entry schema",
+    "slug": "journal-entry-schema",
+    "deps": [
+      "PR-017"
+    ]
+  },
+  {
+    "id": "PR-021",
+    "milestone": "M3 Ledger",
+    "title": "Balanced posting kernel",
+    "slug": "balanced-posting-kernel",
+    "deps": [
+      "PR-017"
+    ]
+  },
+  {
+    "id": "PR-022",
+    "milestone": "M3 Ledger",
+    "title": "Availability account classes",
+    "slug": "availability-account-classes",
+    "deps": [
+      "PR-017"
+    ]
+  },
+  {
+    "id": "PR-023",
+    "milestone": "M3 Ledger",
+    "title": "Idempotent accounting event",
+    "slug": "idempotent-accounting-event",
+    "deps": [
+      "PR-017"
+    ]
+  },
+  {
+    "id": "PR-024",
+    "milestone": "M3 Ledger",
+    "title": "Compensating corrections",
+    "slug": "compensating-corrections",
+    "deps": [
+      "PR-017"
+    ]
+  },
+  {
+    "id": "PR-025",
+    "milestone": "M3 Ledger",
+    "title": "Ledger property tests",
+    "slug": "ledger-property-tests",
+    "deps": [
+      "PR-017"
+    ]
+  },
+  {
+    "id": "PR-026",
+    "milestone": "M3 Ledger",
+    "title": "Ledger read projections",
+    "slug": "ledger-read-projections",
+    "deps": [
+      "PR-017"
+    ]
+  },
+  {
+    "id": "PR-027",
+    "milestone": "M4 Payments",
+    "title": "Payment intent domain",
+    "slug": "payment-intent-domain",
+    "deps": [
+      "PR-017"
+    ]
+  },
+  {
+    "id": "PR-028",
+    "milestone": "M4 Payments",
+    "title": "Mercado Pago capability claim contract",
+    "slug": "mercado-pago-capability-claim-contract",
+    "deps": [
+      "PR-027"
+    ]
+  },
+  {
+    "id": "PR-029",
+    "milestone": "M4 Payments",
+    "title": "Pix request adapter sandbox contract",
+    "slug": "pix-request-adapter-sandbox-contract",
+    "deps": [
+      "PR-027"
+    ]
+  },
+  {
+    "id": "PR-030",
+    "milestone": "M4 Payments",
+    "title": "Webhook inbox/signature contract",
+    "slug": "webhook-inbox-signature-contract",
+    "deps": [
+      "PR-027"
+    ]
+  },
+  {
+    "id": "PR-031",
+    "milestone": "M4 Payments",
+    "title": "Canonical payment query contract",
+    "slug": "canonical-payment-query-contract",
+    "deps": [
+      "PR-027"
+    ]
+  },
+  {
+    "id": "PR-032",
+    "milestone": "M4 Payments",
+    "title": "Payment lifecycle state machine",
+    "slug": "payment-lifecycle-state-machine",
+    "deps": [
+      "PR-027"
+    ]
+  },
+  {
+    "id": "PR-033",
+    "milestone": "M4 Payments",
+    "title": "Payment-to-ledger settlement policy",
+    "slug": "payment-to-ledger-settlement-policy",
+    "deps": [
+      "PR-027",
+      "PR-032"
+    ]
+  },
+  {
+    "id": "PR-034",
+    "milestone": "M4 Payments",
+    "title": "Payment reconciliation cases",
+    "slug": "payment-reconciliation-cases",
+    "deps": [
+      "PR-027",
+      "PR-033"
+    ]
+  },
+  {
+    "id": "PR-035",
+    "milestone": "M5 Wallet Infrastructure",
+    "title": "Wallet address model",
+    "slug": "wallet-address-model",
+    "deps": [
+      "PR-027"
+    ]
+  },
+  {
+    "id": "PR-036",
+    "milestone": "M5 Wallet Infrastructure",
+    "title": "Wallet ownership challenge",
+    "slug": "wallet-ownership-challenge",
+    "deps": [
+      "PR-035"
+    ]
+  },
+  {
+    "id": "PR-037",
+    "milestone": "M5 Wallet Infrastructure",
+    "title": "SIWE validation contract",
+    "slug": "siwe-validation-contract",
+    "deps": [
+      "PR-035"
+    ]
+  },
+  {
+    "id": "PR-038",
+    "milestone": "M5 Wallet Infrastructure",
+    "title": "Address allowlist/cooldown",
+    "slug": "address-allowlist-cooldown",
+    "deps": [
+      "PR-035"
+    ]
+  },
+  {
+    "id": "PR-039",
+    "milestone": "M5 Wallet Infrastructure",
+    "title": "Destination mutation invalidation",
+    "slug": "destination-mutation-invalidation",
+    "deps": [
+      "PR-035"
+    ]
+  },
+  {
+    "id": "PR-040",
+    "milestone": "M5 Wallet Infrastructure",
+    "title": "Signer request contract",
+    "slug": "signer-request-contract",
+    "deps": [
+      "PR-035",
+      "PR-039"
+    ]
+  },
+  {
+    "id": "PR-041",
+    "milestone": "M6 Market Data",
+    "title": "Market source capability contract",
+    "slug": "market-source-capability-contract",
+    "deps": [
+      "PR-035"
+    ]
+  },
+  {
+    "id": "PR-042",
+    "milestone": "M6 Market Data",
+    "title": "Market snapshot schema",
+    "slug": "market-snapshot-schema",
+    "deps": [
+      "PR-041"
+    ]
+  },
+  {
+    "id": "PR-043",
+    "milestone": "M6 Market Data",
+    "title": "Order book normalizer",
+    "slug": "order-book-normalizer",
+    "deps": [
+      "PR-041"
+    ]
+  },
+  {
+    "id": "PR-044",
+    "milestone": "M6 Market Data",
+    "title": "Freshness/quality decision",
+    "slug": "freshness-quality-decision",
+    "deps": [
+      "PR-041"
+    ]
+  },
+  {
+    "id": "PR-045",
+    "milestone": "M6 Market Data",
+    "title": "Quote reservation",
+    "slug": "quote-reservation",
+    "deps": [
+      "PR-041"
+    ]
+  },
+  {
+    "id": "PR-046",
+    "milestone": "M6 Market Data",
+    "title": "Market data replay fixtures",
+    "slug": "market-data-replay-fixtures",
+    "deps": [
+      "PR-041"
+    ]
+  },
+  {
+    "id": "PR-047",
+    "milestone": "M6 Market Data",
+    "title": "Source health telemetry",
+    "slug": "source-health-telemetry",
+    "deps": [
+      "PR-041"
+    ]
+  },
+  {
+    "id": "PR-048",
+    "milestone": "M7 Exchange Integration",
+    "title": "Exchange adapter trait",
+    "slug": "exchange-adapter-trait",
+    "deps": [
+      "PR-041"
+    ]
+  },
+  {
+    "id": "PR-049",
+    "milestone": "M7 Exchange Integration",
+    "title": "Capability negotiation",
+    "slug": "capability-negotiation",
+    "deps": [
+      "PR-048"
+    ]
+  },
+  {
+    "id": "PR-050",
+    "milestone": "M7 Exchange Integration",
+    "title": "Market/balance read contracts",
+    "slug": "market-balance-read-contracts",
+    "deps": [
+      "PR-048"
+    ]
+  },
+  {
+    "id": "PR-051",
+    "milestone": "M7 Exchange Integration",
+    "title": "Order intent contract",
+    "slug": "order-intent-contract",
+    "deps": [
+      "PR-048"
+    ]
+  },
+  {
+    "id": "PR-052",
+    "milestone": "M7 Exchange Integration",
+    "title": "Order lifecycle reconciliation",
+    "slug": "order-lifecycle-reconciliation",
+    "deps": [
+      "PR-048",
+      "PR-051"
+    ]
+  },
+  {
+    "id": "PR-053",
+    "milestone": "M7 Exchange Integration",
+    "title": "Exchange simulated adapter",
+    "slug": "exchange-simulated-adapter",
+    "deps": [
+      "PR-048"
+    ]
+  },
+  {
+    "id": "PR-054",
+    "milestone": "M8 Risk Engine",
+    "title": "Risk policy schema",
+    "slug": "risk-policy-schema",
+    "deps": [
+      "PR-048"
+    ]
+  },
+  {
+    "id": "PR-055",
+    "milestone": "M8 Risk Engine",
+    "title": "Exposure snapshot",
+    "slug": "exposure-snapshot",
+    "deps": [
+      "PR-054"
+    ]
+  },
+  {
+    "id": "PR-056",
+    "milestone": "M8 Risk Engine",
+    "title": "Position/protocol/chain limits",
+    "slug": "position-protocol-chain-limits",
+    "deps": [
+      "PR-054"
+    ]
+  },
+  {
+    "id": "PR-057",
+    "milestone": "M8 Risk Engine",
+    "title": "Slippage/impact/gas limits",
+    "slug": "slippage-impact-gas-limits",
+    "deps": [
+      "PR-054"
+    ]
+  },
+  {
+    "id": "PR-058",
+    "milestone": "M8 Risk Engine",
+    "title": "Kill switch hierarchy",
+    "slug": "kill-switch-hierarchy",
+    "deps": [
+      "PR-054"
+    ]
+  },
+  {
+    "id": "PR-059",
+    "milestone": "M8 Risk Engine",
+    "title": "Risk decision binding",
+    "slug": "risk-decision-binding",
+    "deps": [
+      "PR-054"
+    ]
+  },
+  {
+    "id": "PR-060",
+    "milestone": "M8 Risk Engine",
+    "title": "Risk property tests",
+    "slug": "risk-property-tests",
+    "deps": [
+      "PR-054"
+    ]
+  },
+  {
+    "id": "PR-061",
+    "milestone": "M9 Execution Engine",
+    "title": "Execution plan hash",
+    "slug": "execution-plan-hash",
+    "deps": [
+      "PR-054"
+    ]
+  },
+  {
+    "id": "PR-062",
+    "milestone": "M9 Execution Engine",
+    "title": "Simulation evidence contract",
+    "slug": "simulation-evidence-contract",
+    "deps": [
+      "PR-061"
+    ]
+  },
+  {
+    "id": "PR-063",
+    "milestone": "M9 Execution Engine",
+    "title": "Transaction guard decoder",
+    "slug": "transaction-guard-decoder",
+    "deps": [
+      "PR-061",
+      "PR-062"
+    ]
+  },
+  {
+    "id": "PR-064",
+    "milestone": "M9 Execution Engine",
+    "title": "Allowlist/function validation",
+    "slug": "allowlist-function-validation",
+    "deps": [
+      "PR-061"
+    ]
+  },
+  {
+    "id": "PR-065",
+    "milestone": "M9 Execution Engine",
+    "title": "Execution intent/outbox",
+    "slug": "execution-intent-outbox",
+    "deps": [
+      "PR-061"
+    ]
+  },
+  {
+    "id": "PR-066",
+    "milestone": "M9 Execution Engine",
+    "title": "Adapter submission evidence",
+    "slug": "adapter-submission-evidence",
+    "deps": [
+      "PR-061"
+    ]
+  },
+  {
+    "id": "PR-067",
+    "milestone": "M9 Execution Engine",
+    "title": "Execution state reconciliation",
+    "slug": "execution-state-reconciliation",
+    "deps": [
+      "PR-061",
+      "PR-066"
+    ]
+  },
+  {
+    "id": "PR-068",
+    "milestone": "M10 Paper Trading",
+    "title": "Paper environment attestation",
+    "slug": "paper-environment-attestation",
+    "deps": [
+      "PR-061"
+    ]
+  },
+  {
+    "id": "PR-069",
+    "milestone": "M10 Paper Trading",
+    "title": "Virtual ledger isolation",
+    "slug": "virtual-ledger-isolation",
+    "deps": [
+      "PR-068"
+    ]
+  },
+  {
+    "id": "PR-070",
+    "milestone": "M10 Paper Trading",
+    "title": "Paper fill model",
+    "slug": "paper-fill-model",
+    "deps": [
+      "PR-068"
+    ]
+  },
+  {
+    "id": "PR-071",
+    "milestone": "M10 Paper Trading",
+    "title": "Paper strategy execution",
+    "slug": "paper-strategy-execution",
+    "deps": [
+      "PR-068"
+    ]
+  },
+  {
+    "id": "PR-072",
+    "milestone": "M10 Paper Trading",
+    "title": "Paper portfolio projections",
+    "slug": "paper-portfolio-projections",
+    "deps": [
+      "PR-068"
+    ]
+  },
+  {
+    "id": "PR-073",
+    "milestone": "M10 Paper Trading",
+    "title": "Paper replay/reporting",
+    "slug": "paper-replay-reporting",
+    "deps": [
+      "PR-068"
+    ]
+  },
+  {
+    "id": "PR-074",
+    "milestone": "M11 Arbitrage",
+    "title": "Opportunity model",
+    "slug": "opportunity-model",
+    "deps": [
+      "PR-068"
+    ]
+  },
+  {
+    "id": "PR-075",
+    "milestone": "M11 Arbitrage",
+    "title": "Net profit model",
+    "slug": "net-profit-model",
+    "deps": [
+      "PR-074"
+    ]
+  },
+  {
+    "id": "PR-076",
+    "milestone": "M11 Arbitrage",
+    "title": "Triangular graph detection",
+    "slug": "triangular-graph-detection",
+    "deps": [
+      "PR-074"
+    ]
+  },
+  {
+    "id": "PR-077",
+    "milestone": "M11 Arbitrage",
+    "title": "Arbitrage simulation",
+    "slug": "arbitrage-simulation",
+    "deps": [
+      "PR-074"
+    ]
+  },
+  {
+    "id": "PR-078",
+    "milestone": "M11 Arbitrage",
+    "title": "Arbitrage risk policy",
+    "slug": "arbitrage-risk-policy",
+    "deps": [
+      "PR-074"
+    ]
+  },
+  {
+    "id": "PR-079",
+    "milestone": "M11 Arbitrage",
+    "title": "Arbitrage paper dashboard",
+    "slug": "arbitrage-paper-dashboard",
+    "deps": [
+      "PR-074"
+    ]
+  },
+  {
+    "id": "PR-080",
+    "milestone": "M12 Blockchain",
+    "title": "EVM chain capability contract",
+    "slug": "evm-chain-capability-contract",
+    "deps": [
+      "PR-074"
+    ]
+  },
+  {
+    "id": "PR-081",
+    "milestone": "M12 Blockchain",
+    "title": "Chain simulation/gas",
+    "slug": "chain-simulation-gas",
+    "deps": [
+      "PR-080"
+    ]
+  },
+  {
+    "id": "PR-082",
+    "milestone": "M12 Blockchain",
+    "title": "Nonce reservation",
+    "slug": "nonce-reservation",
+    "deps": [
+      "PR-080"
+    ]
+  },
+  {
+    "id": "PR-083",
+    "milestone": "M12 Blockchain",
+    "title": "Receipt/finality evidence",
+    "slug": "receipt-finality-evidence",
+    "deps": [
+      "PR-080"
+    ]
+  },
+  {
+    "id": "PR-084",
+    "milestone": "M12 Blockchain",
+    "title": "Reorg reconciliation",
+    "slug": "reorg-reconciliation",
+    "deps": [
+      "PR-080",
+      "PR-083"
+    ]
+  },
+  {
+    "id": "PR-085",
+    "milestone": "M12 Blockchain",
+    "title": "Testnet environment isolation",
+    "slug": "testnet-environment-isolation",
+    "deps": [
+      "PR-080"
+    ]
+  },
+  {
+    "id": "PR-086",
+    "milestone": "M12 Blockchain",
+    "title": "Chain adapter simulated tests",
+    "slug": "chain-adapter-simulated-tests",
+    "deps": [
+      "PR-080"
+    ]
+  },
+  {
+    "id": "PR-087",
+    "milestone": "M13 DEX",
+    "title": "Protocol registry",
+    "slug": "protocol-registry",
+    "deps": [
+      "PR-080"
+    ]
+  },
+  {
+    "id": "PR-088",
+    "milestone": "M13 DEX",
+    "title": "DEX quote contract",
+    "slug": "dex-quote-contract",
+    "deps": [
+      "PR-087"
+    ]
+  },
+  {
+    "id": "PR-089",
+    "milestone": "M13 DEX",
+    "title": "Swap candidate decoder",
+    "slug": "swap-candidate-decoder",
+    "deps": [
+      "PR-087"
+    ]
+  },
+  {
+    "id": "PR-090",
+    "milestone": "M13 DEX",
+    "title": "DEX simulation/slippage",
+    "slug": "dex-simulation-slippage",
+    "deps": [
+      "PR-087"
+    ]
+  },
+  {
+    "id": "PR-091",
+    "milestone": "M13 DEX",
+    "title": "Approval policy",
+    "slug": "approval-policy",
+    "deps": [
+      "PR-087"
+    ]
+  },
+  {
+    "id": "PR-092",
+    "milestone": "M13 DEX",
+    "title": "DEX testnet adapter",
+    "slug": "dex-testnet-adapter",
+    "deps": [
+      "PR-087"
+    ]
+  },
+  {
+    "id": "PR-093",
+    "milestone": "M13 DEX",
+    "title": "DEX adverse fixtures",
+    "slug": "dex-adverse-fixtures",
+    "deps": [
+      "PR-087"
+    ]
+  },
+  {
+    "id": "PR-094",
+    "milestone": "M14 Liquidity Pools",
+    "title": "Pool risk assessment",
+    "slug": "pool-risk-assessment",
+    "deps": [
+      "PR-087"
+    ]
+  },
+  {
+    "id": "PR-095",
+    "milestone": "M14 Liquidity Pools",
+    "title": "LP position model",
+    "slug": "lp-position-model",
+    "deps": [
+      "PR-094"
+    ]
+  },
+  {
+    "id": "PR-096",
+    "milestone": "M14 Liquidity Pools",
+    "title": "Impermanent loss model",
+    "slug": "impermanent-loss-model",
+    "deps": [
+      "PR-094"
+    ]
+  },
+  {
+    "id": "PR-097",
+    "milestone": "M14 Liquidity Pools",
+    "title": "Range proposal policy",
+    "slug": "range-proposal-policy",
+    "deps": [
+      "PR-094"
+    ]
+  },
+  {
+    "id": "PR-098",
+    "milestone": "M14 Liquidity Pools",
+    "title": "Rebalance cost simulation",
+    "slug": "rebalance-cost-simulation",
+    "deps": [
+      "PR-094"
+    ]
+  },
+  {
+    "id": "PR-099",
+    "milestone": "M14 Liquidity Pools",
+    "title": "LP lifecycle monitor",
+    "slug": "lp-lifecycle-monitor",
+    "deps": [
+      "PR-094"
+    ]
+  },
+  {
+    "id": "PR-100",
+    "milestone": "M15 AI Layer",
+    "title": "AI provider contract",
+    "slug": "ai-provider-contract",
+    "deps": [
+      "PR-094"
+    ]
+  },
+  {
+    "id": "PR-101",
+    "milestone": "M15 AI Layer",
+    "title": "Redacted context builder",
+    "slug": "redacted-context-builder",
+    "deps": [
+      "PR-100"
+    ]
+  },
+  {
+    "id": "PR-102",
+    "milestone": "M15 AI Layer",
+    "title": "Structured proposal schema",
+    "slug": "structured-proposal-schema",
+    "deps": [
+      "PR-100"
+    ]
+  },
+  {
+    "id": "PR-103",
+    "milestone": "M15 AI Layer",
+    "title": "Proposal provenance/audit",
+    "slug": "proposal-provenance-audit",
+    "deps": [
+      "PR-100"
+    ]
+  },
+  {
+    "id": "PR-104",
+    "milestone": "M15 AI Layer",
+    "title": "AI denial and malformed output",
+    "slug": "ai-denial-and-malformed-output",
+    "deps": [
+      "PR-100"
+    ]
+  },
+  {
+    "id": "PR-105",
+    "milestone": "M15 AI Layer",
+    "title": "AI advisory dashboard",
+    "slug": "ai-advisory-dashboard",
+    "deps": [
+      "PR-100"
+    ]
+  },
+  {
+    "id": "PR-106",
+    "milestone": "M16 Portfolio Automation",
+    "title": "Portfolio allocation policy",
+    "slug": "portfolio-allocation-policy",
+    "deps": [
+      "PR-100"
+    ]
+  },
+  {
+    "id": "PR-107",
+    "milestone": "M16 Portfolio Automation",
+    "title": "Cash reserve policy",
+    "slug": "cash-reserve-policy",
+    "deps": [
+      "PR-106"
+    ]
+  },
+  {
+    "id": "PR-108",
+    "milestone": "M16 Portfolio Automation",
+    "title": "Diversification/correlation model",
+    "slug": "diversification-correlation-model",
+    "deps": [
+      "PR-106"
+    ]
+  },
+  {
+    "id": "PR-109",
+    "milestone": "M16 Portfolio Automation",
+    "title": "Portfolio rebalance proposal",
+    "slug": "portfolio-rebalance-proposal",
+    "deps": [
+      "PR-106"
+    ]
+  },
+  {
+    "id": "PR-110",
+    "milestone": "M16 Portfolio Automation",
+    "title": "Automation mode gates",
+    "slug": "automation-mode-gates",
+    "deps": [
+      "PR-106"
+    ]
+  },
+  {
+    "id": "PR-111",
+    "milestone": "M16 Portfolio Automation",
+    "title": "Autopilot deny-by-default",
+    "slug": "autopilot-deny-by-default",
+    "deps": [
+      "PR-106"
+    ]
+  },
+  {
+    "id": "PR-112",
+    "milestone": "M17 Testnet",
+    "title": "Testnet capability claims",
+    "slug": "testnet-capability-claims",
+    "deps": [
+      "PR-106"
+    ]
+  },
+  {
+    "id": "PR-113",
+    "milestone": "M17 Testnet",
+    "title": "Testnet signer isolation",
+    "slug": "testnet-signer-isolation",
+    "deps": [
+      "PR-112"
+    ]
+  },
+  {
+    "id": "PR-114",
+    "milestone": "M17 Testnet",
+    "title": "Swap testnet smoke contract",
+    "slug": "swap-testnet-smoke-contract",
+    "deps": [
+      "PR-112"
+    ]
+  },
+  {
+    "id": "PR-115",
+    "milestone": "M17 Testnet",
+    "title": "LP testnet smoke contract",
+    "slug": "lp-testnet-smoke-contract",
+    "deps": [
+      "PR-112"
+    ]
+  },
+  {
+    "id": "PR-116",
+    "milestone": "M17 Testnet",
+    "title": "Testnet reconciliation drill",
+    "slug": "testnet-reconciliation-drill",
+    "deps": [
+      "PR-112",
+      "PR-115"
+    ]
+  },
+  {
+    "id": "PR-117",
+    "milestone": "M18 Security Hardening",
+    "title": "Secret manager adapter",
+    "slug": "secret-manager-adapter",
+    "deps": [
+      "PR-112"
+    ]
+  },
+  {
+    "id": "PR-118",
+    "milestone": "M18 Security Hardening",
+    "title": "Secret redaction middleware",
+    "slug": "secret-redaction-middleware",
+    "deps": [
+      "PR-117"
+    ]
+  },
+  {
+    "id": "PR-119",
+    "milestone": "M18 Security Hardening",
+    "title": "Threat fixture suite",
+    "slug": "threat-fixture-suite",
+    "deps": [
+      "PR-117"
+    ]
+  },
+  {
+    "id": "PR-120",
+    "milestone": "M18 Security Hardening",
+    "title": "Audit external-anchor design",
+    "slug": "audit-external-anchor-design",
+    "deps": [
+      "PR-117",
+      "PR-119"
+    ]
+  },
+  {
+    "id": "PR-121",
+    "milestone": "M18 Security Hardening",
+    "title": "Chaos fault matrix",
+    "slug": "chaos-fault-matrix",
+    "deps": [
+      "PR-117"
+    ]
+  },
+  {
+    "id": "PR-122",
+    "milestone": "M18 Security Hardening",
+    "title": "Incident/kill-switch drill",
+    "slug": "incident-kill-switch-drill",
+    "deps": [
+      "PR-117"
+    ]
+  },
+  {
+    "id": "PR-123",
+    "milestone": "M19 Compliance Readiness",
+    "title": "Legal disposition register",
+    "slug": "legal-disposition-register",
+    "deps": [
+      "PR-117"
+    ]
+  },
+  {
+    "id": "PR-124",
+    "milestone": "M19 Compliance Readiness",
+    "title": "KYC/KYT/sanctions boundary",
+    "slug": "kyc-kyt-sanctions-boundary",
+    "deps": [
+      "PR-123"
+    ]
+  },
+  {
+    "id": "PR-125",
+    "milestone": "M19 Compliance Readiness",
+    "title": "PII classification/retention",
+    "slug": "pii-classification-retention",
+    "deps": [
+      "PR-123"
+    ]
+  },
+  {
+    "id": "PR-126",
+    "milestone": "M19 Compliance Readiness",
+    "title": "Compliance case/audit",
+    "slug": "compliance-case-audit",
+    "deps": [
+      "PR-123"
+    ]
+  },
+  {
+    "id": "PR-127",
+    "milestone": "M19 Compliance Readiness",
+    "title": "Tax/accounting policy gate",
+    "slug": "tax-accounting-policy-gate",
+    "deps": [
+      "PR-123"
+    ]
+  },
+  {
+    "id": "PR-128",
+    "milestone": "M20 Mainnet Readiness",
+    "title": "Readiness evidence evaluator",
+    "slug": "readiness-evidence-evaluator",
+    "deps": [
+      "PR-123"
+    ]
+  },
+  {
+    "id": "PR-129",
+    "milestone": "M20 Mainnet Readiness",
+    "title": "Signed activation authorization",
+    "slug": "signed-activation-authorization",
+    "deps": [
+      "PR-128"
+    ]
+  },
+  {
+    "id": "PR-130",
+    "milestone": "M20 Mainnet Readiness",
+    "title": "Environment attestation verifier",
+    "slug": "environment-attestation-verifier",
+    "deps": [
+      "PR-128"
+    ]
+  },
+  {
+    "id": "PR-131",
+    "milestone": "M20 Mainnet Readiness",
+    "title": "Capital limit enforcement",
+    "slug": "capital-limit-enforcement",
+    "deps": [
+      "PR-128"
+    ]
+  },
+  {
+    "id": "PR-132",
+    "milestone": "M20 Mainnet Readiness",
+    "title": "Mainnet denial regression suite",
+    "slug": "mainnet-denial-regression-suite",
+    "deps": [
+      "PR-128"
+    ]
+  },
+  {
+    "id": "PR-133",
+    "milestone": "M20 Mainnet Readiness",
+    "title": "Manual activation governance",
+    "slug": "manual-activation-governance",
+    "deps": [
+      "PR-128",
+      "PR-132"
+    ]
+  }
+]
