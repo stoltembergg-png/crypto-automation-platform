@@ -17,6 +17,14 @@
     .card { padding:20px; border:1px solid var(--line); border-radius:14px; background:color-mix(in srgb,var(--panel) 92%,transparent); }
     .value { margin:4px 0; color:var(--green); font-size:2rem; font-weight:800; } .label { color:var(--muted); font-size:.8rem; text-transform:uppercase; letter-spacing:.08em; }
     section { margin-top:36px; padding-top:26px; border-top:1px solid var(--line); } h2 { margin:0 0 10px; font-size:1.25rem; } ul { padding-left:20px; color:var(--muted); } strong { color:var(--text); }
+    .bar { margin:18px 0; } .bar-head { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px; }
+    .bar-name { color:var(--text); font-weight:600; } .bar-metric { color:var(--muted); font-size:.85rem; }
+    .track { height:14px; border:1px solid var(--line); border-radius:999px; background:#0b1626; overflow:hidden; }
+    .fill { height:100%; border-radius:999px; }
+    .fill.plan { width:100%; background:linear-gradient(90deg,#2f8f5b,var(--green)); }
+    .fill.half { width:50%; background:linear-gradient(90deg,#3b6ea8,var(--blue)); }
+    .fill.zero { width:0%; }
+    .bar-note { color:var(--muted); font-size:.8rem; margin-top:4px; }
     footer { margin-top:46px; color:var(--muted); font-size:.88rem; } code { color:#c7e2ff; }
   </style>
 </head>
@@ -32,6 +40,24 @@
       <article class="card"><div class="label">Traceability</div><div class="value">68</div><div>Grupos de mandato mapeados</div></article>
       <article class="card"><div class="label">Runtime financeiro</div><div class="value">0</div><div>Intencionalmente ausente</div></article>
     </div>
+    <section>
+      <h2>Progresso</h2>
+      <div class="bar">
+        <div class="bar-head"><span class="bar-name">Documentação de planejamento</span><span class="bar-metric">87/87 arquivos · 11/11 critérios validados</span></div>
+        <div class="track"><div class="fill plan"></div></div>
+        <div class="bar-note">Baseline documental materializada, validada por testes e publicada. Não é implementação de produto.</div>
+      </div>
+      <div class="bar">
+        <div class="bar-head"><span class="bar-name">Planejamento de implementação</span><span class="bar-metric">fila + DAG prontos</span></div>
+        <div class="track"><div class="fill half"></div></div>
+        <div class="bar-note">141 cartões desenhados e DAG acíclica; execução ainda não iniciada.</div>
+      </div>
+      <div class="bar">
+        <div class="bar-head"><span class="bar-name">Implementação financeira</span><span class="bar-metric">0% — intencional</span></div>
+        <div class="track"><div class="fill zero"></div></div>
+        <div class="bar-note">Depósitos, Pix, saques, wallets, exchanges, execução e mainnet permanecem desabilitados (fail-closed).</div>
+      </div>
+    </section>
     <section><h2>O que existe agora</h2><ul><li>Especificações, ADRs, contratos, diagramas, threat model, matriz de readiness e estratégia de testes.</li><li>Uma fila de implementação com dependências acíclicas e critérios de aceite futuros.</li><li>Gates PAPER → TESTNET → MAINNET que permanecem fail-closed.</li></ul></section>
     <section><h2>O que não existe agora</h2><ul><li>Depósitos, Pix, saques, carteiras, assinaturas, API keys, contas de exchange, execução de trades ou interação mainnet.</li><li>Qualquer alegação de aprovação jurídica, regulatória, contratual ou de capacidade de provedor.</li></ul></section>
     <footer>Fonte de verdade: documentação versionada no repositório. A disponibilidade desta página prova somente o serving estático de <code>/develop</code>.</footer>

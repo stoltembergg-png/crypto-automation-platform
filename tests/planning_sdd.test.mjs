@@ -72,6 +72,8 @@ test('@spec:AC-011 develop page is status-only and does not imply a financial ru
   const page = read('develop/index.html');
   const config = read('vercel.json');
   for (const marker of ['PLANNING BASELINE', '141', '68', 'MAINNET BLOCKED']) assert.ok(page.includes(marker), marker);
+  assert.ok(page.includes('Progresso'), 'progress section');
+  assert.ok(/class="track"/.test(page), 'progress bar track');
   assert.equal(/<form|<script\b|https?:\/\//i.test(page), false);
   assert.ok(config.includes('"/develop"'));
 });
